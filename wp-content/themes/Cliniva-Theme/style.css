@@ -1,0 +1,16 @@
+/*
+Theme Name: Cliniva Theme
+Theme URI: 
+Author: Cliniva
+Author URI: 
+Description: A minimal WordPress theme for Cliniva, designed to be built with Elementor.
+Version: 1.0.0
+Text Domain: cliniva-theme
+*/
+
+/* Minimal CSS only. Add custom styles via Elementor or later. */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}

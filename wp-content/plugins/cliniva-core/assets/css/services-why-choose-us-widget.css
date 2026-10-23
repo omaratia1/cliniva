@@ -1,0 +1,264 @@
+/*
+|--------------------------------------------------------------------------
+| Cliniva - Services Why Choose Us
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-services-why-choose-us {
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.cliniva-services-why-choose-us *,
+.cliniva-services-why-choose-us *::before,
+.cliniva-services-why-choose-us *::after {
+    box-sizing: border-box;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| INNER
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-services-why-choose-us__inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| SECTION TITLE
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-services-why-choose-us__title {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+
+    margin-bottom: 40px;
+
+    padding: 0;
+
+    color: #14213D;
+
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| GRID
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-why-choose-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+
+    align-items: stretch;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CARD
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-why-choose-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 304px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 34px 24px 28px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 2px 4px rgba(20, 33, 61, 0.08),
+        0 8px 18px rgba(20, 33, 61, 0.10);
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cliniva-why-choose-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 4px 8px rgba(20, 33, 61, 0.08),
+        0 12px 24px rgba(20, 33, 61, 0.12);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| ICON
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-why-choose-card__icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 24px;
+
+    flex: 0 0 auto;
+}
+
+.cliniva-why-choose-card__icon img {
+    display: block;
+
+    width: 60px;
+    height: 60px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CARD TITLE
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-why-choose-card__title {
+    width: 100%;
+
+    margin: 0 0 18px;
+    padding: 0;
+
+    color: #2467E8;
+
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.25;
+
+    text-align: center;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CARD DESCRIPTION
+|--------------------------------------------------------------------------
+*/
+
+.cliniva-why-choose-card__description {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    color: #536783;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| TABLET
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 1024px) {
+
+    .cliniva-services-why-choose-us__inner {
+        max-width: 100%;
+    }
+
+    .cliniva-why-choose-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cliniva-why-choose-card {
+        min-height: 290px;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| MOBILE
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 767px) {
+
+    .cliniva-services-why-choose-us__inner {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cliniva-services-why-choose-us__title {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .cliniva-why-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .cliniva-why-choose-card {
+        min-height: auto;
+
+        padding: 30px 22px 28px;
+    }
+
+    .cliniva-why-choose-card__icon {
+        margin-bottom: 20px;
+    }
+
+    .cliniva-why-choose-card__title {
+        font-size: 22px;
+    }
+
+    .cliniva-why-choose-card__description {
+        font-size: 15px;
+    }
+
+}

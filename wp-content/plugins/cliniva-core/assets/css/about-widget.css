@@ -1,0 +1,887 @@
+/* =========================================================
+   CLINIVA - ABOUT US WIDGET
+   FIGMA MATCHED LAYOUT
+   ========================================================= */
+
+.cliniva-about {
+    width: 100%;
+    max-width: 1394px;
+    min-height: 808px;
+
+    margin-top: -90px;
+    padding: 42px 32px 0;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    background: #eef5ff;
+    color: #16213a;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN ABOUT AREA
+   ========================================================= */
+
+.cliniva-about__main {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 650px) 460px;
+
+    justify-content: space-between;
+
+    column-gap: 0;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.cliniva-about__content {
+    width: 100%;
+    max-width: 650px;
+
+    padding-top: 0;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.cliniva-about__eyebrow {
+    width: 245px;
+    height: 40px;
+
+    margin: 0 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border-radius: 999px;
+
+    color: #2467e8;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.cliniva-about__heading {
+    margin: 0 0 18px;
+    padding: 0;
+
+    color: #16213a;
+
+    font-size: 28px;
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+.cliniva-about__heading-before {
+    color: #16213a;
+}
+
+.cliniva-about__heading-highlight {
+    color: #2467e8;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.cliniva-about__description {
+    width: 100%;
+    max-width: 610px;
+
+    margin: 0 0 28px;
+    padding: 0;
+
+    color: #53647f;
+
+    font-size: 16px;
+    line-height: 1.65;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.cliniva-about__features {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+
+/* =========================================================
+   SINGLE FEATURE
+   ========================================================= */
+
+.cliniva-about__feature {
+    width: 100%;
+
+    min-height: 94px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    border-bottom:
+        1px solid rgba(36, 103, 232, 0.07);
+}
+
+.cliniva-about__feature:last-child {
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   FEATURE ICON BOX
+   ========================================================= */
+
+.cliniva-about__feature-icon {
+    flex: 0 0 84px;
+
+    width: 84px;
+    height: 84px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dceaff;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+}
+
+.cliniva-about__feature-icon img {
+    display: block;
+
+    width: 38px;
+    height: 38px;
+
+    max-width: 38px;
+    max-height: 38px;
+
+    object-fit: contain;
+}
+
+.cliniva-about__icon-placeholder {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2467e8;
+
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   FEATURE CONTENT
+   ========================================================= */
+
+.cliniva-about__feature-content {
+    flex: 1;
+
+    margin: 20px;
+
+    min-width: 0;
+}
+
+.cliniva-about__feature-content h3 {
+    margin: 0 0 6px;
+    padding: 0;
+
+    color: #16213a;
+
+    font-size: 21px;
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+.cliniva-about__feature-content p {
+    max-width: 520px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #53647f;
+
+    font-size: 16px;
+    line-height: 1.65;
+
+    font-weight: 400;
+}
+
+/* =========================================================
+   ABOUT IMAGE — WIDGET + ELEMENTOR IMAGE
+   ========================================================= */
+
+.cliniva-about__image {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 50% 0 0 50% / 50% 0 0 50%;
+    z-index: 1;
+}
+
+.cliniva-about__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.05;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.cliniva-about-image {
+    width: 950px !important;
+    max-width: none !important;
+
+    height: 630px !important;
+
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    position: relative;
+
+    top: 35px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    flex: none;
+
+    background: transparent;
+
+    /*
+     * Figma-like mask:
+     * curve on the left,
+     * straight top / right / bottom.
+     */
+    border-radius:
+        50% 0 0 50% /
+        50% 0 0 50%;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ELEMENTOR IMAGE CONTAINER
+   ========================================================= */
+
+.cliniva-about-image .elementor-widget-container {
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    border-radius: inherit;
+}
+
+
+/* =========================================================
+   ELEMENTOR IMAGE
+   ========================================================= */
+
+.cliniva-about-image img {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    object-fit: cover;
+    object-position: center center;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cliniva-about__main {
+        grid-template-columns:
+            minmax(0, 1fr) 400px;
+
+        column-gap: 20px;
+
+        justify-content: space-between;
+    }
+
+    .cliniva-about-image {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 420px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        right: auto !important;
+        top: 0 !important;
+        margin: 0 auto !important;
+        border-radius: 28px !important;
+    }
+
+    .cliniva-about-image .elementor-widget-container {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .cliniva-about-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 320px !important;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-about__main {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .cliniva-about-image {
+        position: relative;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 360px !important;
+
+        right: auto;
+        top: auto;
+
+        margin: 0;
+
+        border-radius:
+            150px 0 150px 150px;
+    }
+
+    .cliniva-about-image .elementor-widget-container {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .cliniva-about-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-about-image {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 300px !important;
+
+        right: auto;
+        top: auto;
+    }
+
+    .cliniva-about-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+
+/* =========================================================
+   STATISTICS BAR
+   ========================================================= */
+
+.cliniva-about__stats {
+    width: 100%;
+
+    min-height: 155px;
+
+    margin-top: 60px;
+
+    padding: 20px 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(255, 255, 255, 0.48);
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 10px 30px rgba(45, 80, 130, 0.03);
+}
+
+
+/* =========================================================
+   STAT
+   ========================================================= */
+
+.cliniva-about__stat {
+    min-width: 0;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border-right:
+        1px solid rgba(36, 103, 232, 0.10);
+}
+
+.cliniva-about__stat:first-child {
+    padding-left: 0;
+}
+
+.cliniva-about__stat:last-child {
+    border-right: 0;
+
+    padding-right: 0;
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.cliniva-about__stat-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 2px;
+
+    box-sizing: border-box;
+}
+
+.cliniva-about__stat-icon img {
+    display: block;
+
+    width: 48px;
+    height: 48px;
+
+    max-width: 48px;
+    max-height: 48px;
+
+    object-fit: contain;
+}
+
+.cliniva-about__stat-placeholder {
+    color: #12b8ae;
+
+    font-size: 34px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.cliniva-about__stat-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.cliniva-about__stat-number {
+    margin: 0 0 2px;
+
+    color: #10b7ad;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+    font-weight: 600;
+}
+
+.cliniva-about__stat-title {
+    margin: 0 0 4px;
+
+    color: #16213a;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+}
+
+.cliniva-about__stat-description {
+    max-width: 190px;
+
+    color: #53647f;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cliniva-about {
+        width: calc(100% - 32px);
+        min-height: 0;
+        margin-top: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+        overflow: hidden;
+    }
+
+    .cliniva-about__main {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        gap: 28px;
+        align-items: stretch;
+    }
+
+    .cliniva-about__content {
+        width: 100%;
+        max-width: 100%;
+        order: 1;
+    }
+
+    .cliniva-about__image {
+        order: 2;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        border-radius: 28px;
+    }
+
+    .cliniva-about__image img {
+        max-height: 320px;
+        aspect-ratio: 16 / 10;
+    }
+
+    .cliniva-about__heading {
+        font-size: 26px;
+    }
+
+    .cliniva-about__description {
+        font-size: 15px;
+    }
+
+    .cliniva-about__feature-icon {
+        flex-basis: 76px;
+
+        width: 76px;
+        height: 76px;
+    }
+
+    .cliniva-about__feature-content h3 {
+        font-size: 19px;
+    }
+
+    .cliniva-about__feature-content p {
+        font-size: 15px;
+    }
+
+    .cliniva-about__stats {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .cliniva-about__stat {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-about {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: auto;
+
+        margin-top: 0 !important;
+
+        padding:
+            30px 18px 30px;
+
+        overflow: hidden;
+    }
+
+    .cliniva-about__main {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .cliniva-about__image {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 24px;
+    }
+
+    .cliniva-about__image img {
+        aspect-ratio: 16 / 10;
+        max-height: 280px;
+    }
+
+    .cliniva-about__content {
+        order: 1;
+        max-width: 100%;
+        z-index: 2;
+    }
+
+    .cliniva-about__eyebrow {
+        width: 220px;
+        height: 38px;
+
+        margin-bottom: 20px;
+
+        font-size: 15px;
+    }
+
+    .cliniva-about__heading {
+        font-size: 25px;
+
+        margin-bottom: 15px;
+    }
+
+    .cliniva-about__description {
+        max-width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin-bottom: 24px;
+    }
+
+    .cliniva-about__feature {
+        min-height: 82px;
+
+        gap: 12px;
+    }
+
+    .cliniva-about__feature-icon {
+        flex: 0 0 70px;
+
+        width: 70px;
+        height: 70px;
+    }
+
+    .cliniva-about__feature-icon img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .cliniva-about__feature-content h3 {
+        font-size: 18px;
+    }
+
+    .cliniva-about__feature-content p {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .cliniva-about__stats {
+        margin-top: 30px;
+
+        padding: 20px;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 20px;
+
+        min-height: auto;
+    }
+
+    .cliniva-about__stat {
+        min-height: 90px;
+
+        padding: 0;
+
+        border-right: 0;
+    }
+
+    .cliniva-about__stat:nth-child(odd) {
+        border-right:
+            1px solid rgba(36, 103, 232, 0.10);
+
+        padding-right: 12px;
+    }
+
+    .cliniva-about__stat-icon {
+        flex-basis: 40px;
+
+        width: 40px;
+    }
+
+    .cliniva-about__stat-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cliniva-about__stat-number {
+        font-size: 24px;
+    }
+
+    .cliniva-about__stat-title {
+        font-size: 12px;
+    }
+
+    .cliniva-about__stat-description {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-about {
+        width: 100%;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cliniva-about__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .cliniva-about__stat,
+    .cliniva-about__stat:nth-child(odd) {
+        border-right: 0;
+
+        padding-right: 0;
+    }
+}

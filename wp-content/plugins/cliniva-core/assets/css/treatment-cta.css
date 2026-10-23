@@ -1,0 +1,349 @@
+/* =========================================================
+   Cliniva - Treatment CTA
+   ========================================================= */
+
+.cliniva-treatment-cta {
+    width: 100%;
+    max-width: 1274px;
+    min-height: 501px;
+
+    margin: 80px auto;
+    padding: 0;
+
+    background: #E0F2FE;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.cliniva-treatment-cta__content {
+    flex: 1 1 auto;
+
+    padding-left: 84px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    max-width: 650px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.cliniva-treatment-cta__title {
+    margin: 0 0 24px;
+
+    color: #101B35;
+
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.cliniva-treatment-cta__description {
+    margin: 0 0 36px;
+
+    max-width: 540px;
+
+    color: #334A6E;
+
+    font-size: 17px;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.cliniva-treatment-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 13px 22px;
+
+    background: #2467E8;
+    color: #FFFFFF;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 600;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+   ========================================================= */
+
+.cliniva-treatment-cta__button:hover {
+    background: #1D5BD0;
+    color: #FFFFFF;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 8px 20px rgba(36, 103, 232, 0.18);
+}
+
+
+/* =========================================================
+   BUTTON ICON
+   ========================================================= */
+
+.cliniva-treatment-cta__button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 8px;
+
+    font-size: 15px;
+
+    line-height: 1;
+
+    flex-shrink: 0;
+}
+
+.cliniva-treatment-cta__button-icon svg {
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    fill: currentColor;
+}
+
+.cliniva-treatment-cta__button-icon i {
+    font-size: inherit;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   BUTTON TEXT
+   ========================================================= */
+
+.cliniva-treatment-cta__button-text {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+   ========================================================= */
+
+.cliniva-treatment-cta__media {
+    width: 431px;
+    height: 431px;
+
+    flex: 0 0 431px;
+
+    margin-right: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.cliniva-treatment-cta__image {
+    display: block;
+
+    width: 431px;
+    height: 431px;
+
+    max-width: none;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cliniva-treatment-cta {
+        gap: 35px;
+
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .cliniva-treatment-cta__content {
+        padding-left: 0;
+    }
+
+    .cliniva-treatment-cta__media {
+        width: 380px;
+        height: 380px;
+
+        flex-basis: 380px;
+
+        margin-right: 0;
+    }
+
+    .cliniva-treatment-cta__image {
+        width: 380px;
+        height: 380px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-treatment-cta {
+        min-height: auto;
+
+        padding: 40px 25px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 35px;
+
+        border-radius: 16px;
+    }
+
+
+    .cliniva-treatment-cta__content {
+        width: 100%;
+        max-width: none;
+
+        padding: 0;
+    }
+
+
+    .cliniva-treatment-cta__title {
+        font-size: 26px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .cliniva-treatment-cta__description {
+        max-width: none;
+
+        font-size: 16px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .cliniva-treatment-cta__button {
+        width: fit-content;
+    }
+
+
+    .cliniva-treatment-cta__media {
+        width: 100%;
+        height: auto;
+
+        flex: none;
+
+        margin: 0;
+    }
+
+
+    .cliniva-treatment-cta__image {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 1 / 1;
+
+        object-fit: cover;
+
+        border-radius: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-treatment-cta {
+        padding: 30px 20px;
+    }
+
+
+    .cliniva-treatment-cta__title {
+        font-size: 24px;
+    }
+
+
+    .cliniva-treatment-cta__description {
+        font-size: 15px;
+    }
+
+
+    .cliniva-treatment-cta__button {
+        width: 100%;
+    }
+
+
+    .cliniva-treatment-cta__image {
+        border-radius: 18px;
+    }
+}

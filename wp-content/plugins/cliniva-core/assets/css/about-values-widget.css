@@ -1,0 +1,334 @@
+/**
+ * Cliniva About Values
+ *
+ * File:
+ * assets/css/about-values-widget.css
+ */
+
+.cliniva-about-values {
+    --cliniva-blue: #2467e8;
+    --cliniva-navy: #111b33;
+    --cliniva-text: #506789;
+    --cliniva-bg: #f1f6fe;
+    --cliniva-white: #ffffff;
+
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    min-height: 378px;
+    margin: 0 auto;
+    padding: 0 0 0;
+    background: var(--cliniva-bg);
+    box-sizing: border-box;
+}
+
+.cliniva-about-values *,
+.cliniva-about-values *::before,
+.cliniva-about-values *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   SECTION TITLE
+   ========================================= */
+
+.cliniva-about-values__title {
+    margin: 0 0 34px;
+    padding: 0;
+    color: var(--cliniva-navy);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   GRID
+   ========================================= */
+
+.cliniva-about-values__grid {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.cliniva-about-values__card {
+    position: relative;
+    display: flex;
+    flex: 0 0 302px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 302px;
+    height: 300px;
+
+    margin: 0;
+    padding: 48px 24px 24px;
+
+    background: var(--cliniva-white);
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 20px rgba(17, 27, 51, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cliniva-about-values__card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 28px rgba(17, 27, 51, 0.12);
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.cliniva-about-values__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+
+    margin: 0 0 24px;
+
+    color: var(--cliniva-blue);
+
+    font-size: 60px;
+    line-height: 1;
+
+    text-align: center;
+}
+
+.cliniva-about-values__icon i {
+    display: block;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0;
+
+    color: currentColor;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    text-align: center;
+}
+
+.cliniva-about-values__icon svg {
+    display: block;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0;
+
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+
+/* =========================================
+   CARD TITLE
+   ========================================= */
+
+.cliniva-about-values__card-title {
+    width: 100%;
+
+    margin: 0 0 16px;
+    padding: 0;
+
+    color: var(--cliniva-blue);
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.cliniva-about-values__description {
+    width: 100%;
+    max-width: 255px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    color: var(--cliniva-text);
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1200px) {
+
+    .cliniva-about-values {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cliniva-about-values__grid {
+        gap: 16px;
+    }
+
+    .cliniva-about-values__card {
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+    }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+    .cliniva-about-values {
+        min-height: auto;
+        padding: 0 20px 40px;
+    }
+
+    .cliniva-about-values__title {
+        margin-bottom: 28px;
+        font-size: 28px;
+    }
+
+    .cliniva-about-values__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .cliniva-about-values__card {
+        width: 100%;
+        height: 300px;
+        min-height: 300px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-about-values {
+        min-height: auto !important;
+        max-width: 100% !important;
+        padding: 0 16px 36px;
+    }
+
+    .cliniva-about-values__title {
+        margin: 24px 0 !important;
+        font-size: 26px;
+    }
+
+    .cliniva-about-values__grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    .cliniva-about-values__card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 42px 24px 28px;
+    }
+
+    .cliniva-about-values__icon {
+        width: 56px;
+        min-width: 56px;
+        height: 56px;
+        min-height: 56px;
+
+        margin-bottom: 20px;
+
+        font-size: 56px;
+    }
+
+    .cliniva-about-values__icon i {
+        width: 56px;
+        height: 56px;
+
+        font-size: 56px;
+        line-height: 56px;
+    }
+
+    .cliniva-about-values__icon svg {
+        width: 56px;
+        height: 56px;
+    }
+
+    .cliniva-about-values__card-title {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .cliniva-about-values__description {
+        max-width: 300px;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-about-values {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .cliniva-about-values__title {
+        font-size: 24px;
+    }
+
+    .cliniva-about-values__card {
+        min-height: 270px;
+        padding: 38px 20px 24px;
+    }
+}

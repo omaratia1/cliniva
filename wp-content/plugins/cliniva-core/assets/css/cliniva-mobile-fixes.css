@@ -1,0 +1,692 @@
+/**
+ * Cliniva global mobile / tablet safety fixes
+ * Loaded site-wide last to prevent Elementor layout bleed.
+ */
+
+/* =========================================================
+   ELEMENTOR EDITOR DEVICE MODE (preview iframe quirks)
+   ========================================================= */
+
+.elementor-device-mobile .elementor-8 .elementor-element.elementor-element-91165fe,
+.elementor-device-tablet .elementor-8 .elementor-element.elementor-element-91165fe {
+	--margin-top: 12px !important;
+	margin-top: 12px !important;
+}
+
+.elementor-device-mobile .elementor-8 .elementor-element.elementor-element-69d887b,
+.elementor-device-tablet .elementor-8 .elementor-element.elementor-element-69d887b,
+.elementor-device-mobile .elementor-8 .elementor-element.elementor-element-b47f2d2,
+.elementor-device-tablet .elementor-8 .elementor-element.elementor-element-b47f2d2,
+.elementor-device-mobile .elementor-8 .elementor-element.elementor-element-c29e51d,
+.elementor-device-tablet .elementor-8 .elementor-element.elementor-element-c29e51d {
+	--min-height: 0px !important;
+	min-height: 0 !important;
+	height: auto !important;
+}
+
+/* Hero widget is absolute in Elementor — reset so it takes flow space */
+.elementor-device-mobile .elementor-8 .elementor-element.elementor-element-622e64c,
+.elementor-device-tablet .elementor-8 .elementor-element.elementor-element-622e64c {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	inset: auto !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	transform: none !important;
+}
+
+.elementor-device-mobile .cliniva-about,
+.elementor-device-tablet .cliniva-about,
+.elementor-device-mobile .elementor-element .cliniva-about,
+.elementor-device-tablet .elementor-element .cliniva-about {
+	min-height: 0 !important;
+	height: auto !important;
+	margin-top: 0 !important;
+}
+
+/* =========================================================
+   TABLET + MOBILE (≤1024)
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+	/* Kill forced tall Elementor containers on Home */
+	.elementor-8 .e-con.e-parent,
+	.elementor-8 .elementor-element[data-element_type="container"],
+	.elementor-8 .elementor-element.elementor-element-69d887b,
+	.elementor-8 .elementor-element.elementor-element-91165fe,
+	.elementor-8 .elementor-element.elementor-element-b47f2d2,
+	.elementor-8 .elementor-element.elementor-element-c29e51d {
+		--min-height: 0px !important;
+		min-height: 0 !important;
+	}
+
+	.elementor-8 .elementor-element.elementor-element-91165fe {
+		--margin-top: 16px !important;
+		margin-top: 16px !important;
+	}
+
+	/* Hero Elementor absolute widget → relative on small screens */
+	.elementor-8 .elementor-element.elementor-element-622e64c,
+	.elementor-element:has(> .elementor-widget-container .cliniva-hero-wrapper),
+	.elementor-element:has(.cliniva-hero-wrapper) {
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		right: auto !important;
+		inset: auto !important;
+		transform: none !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	.elementor-8 .elementor-element.elementor-element-69d887b {
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+	.elementor-8 .elementor-element.elementor-element-274bdd0 .cliniva-about,
+	.elementor-element .cliniva-about {
+		min-height: 0 !important;
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	.elementor-8 .elementor-element.elementor-element-b8f1ef5 .cliniva-why-choose__image {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 280px !important;
+		aspect-ratio: 3 / 4 !important;
+	}
+
+	.elementor-element:has(.cliniva-hero-wrapper),
+	.elementor-element:has(.cliniva-services),
+	.elementor-element:has(.cliniva-services-grid),
+	.elementor-element:has(.cliniva-about),
+	.elementor-element:has(.cliniva-team),
+	.elementor-element:has(.cliniva-insurance),
+	.elementor-element:has(.cliniva-insurance-card) {
+		--min-height: 0px !important;
+		min-height: 0 !important;
+		--margin-top: 0px !important;
+		margin-top: 16px !important;
+		overflow: visible !important;
+	}
+
+	.elementor-element:has(.cliniva-hero-wrapper) {
+		margin-top: 0 !important;
+	}
+
+	/* ---- Hero ---- */
+	.cliniva-hero-wrapper {
+		overflow: hidden !important;
+		height: auto !important;
+		min-height: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		position: relative !important;
+	}
+
+	.elementor-absolute:has(.cliniva-hero-wrapper),
+	.elementor-element.elementor-absolute:has(.cliniva-hero-wrapper) {
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		right: auto !important;
+		transform: none !important;
+	}
+
+	.cliniva-hero-wrapper .hero-image-col {
+		position: relative !important;
+		transform: none !important;
+		inset: auto !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 auto 8px !important;
+	}
+
+	.cliniva-hero-wrapper .hero-image-wrapper {
+		width: min(360px, 70vw) !important;
+		height: auto !important;
+		aspect-ratio: 1 / 1 !important;
+		margin: 0 auto !important;
+		overflow: hidden !important;
+	}
+
+	.cliniva-hero-wrapper .hero-image-wrapper img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover !important;
+	}
+
+	.cliniva-hero-wrapper .stats-bar-container {
+		position: relative !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		margin: 16px auto 0 !important;
+		transform: none !important;
+	}
+
+	/* ---- About: force stack, no bleed ---- */
+	.cliniva-about {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-top: 0 !important;
+		min-height: 0 !important;
+		height: auto !important;
+		padding: 28px 16px 32px !important;
+		overflow: hidden !important;
+	}
+
+	.cliniva-about__main {
+		display: flex !important;
+		flex-direction: column !important;
+		grid-template-columns: none !important;
+		gap: 24px !important;
+		align-items: stretch !important;
+	}
+
+	.cliniva-about__content {
+		order: 1 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		position: relative !important;
+		z-index: 2 !important;
+	}
+
+	.cliniva-about__image,
+	.cliniva-about-image {
+		order: 2 !important;
+		position: relative !important;
+		inset: auto !important;
+		top: 0 !important;
+		right: auto !important;
+		left: auto !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 0 !important;
+		margin: 0 !important;
+		border-radius: 24px !important;
+		overflow: hidden !important;
+		z-index: 1 !important;
+	}
+
+	.cliniva-about__image img,
+	.cliniva-about-image img {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		max-height: 280px !important;
+		aspect-ratio: 16 / 10 !important;
+		object-fit: cover !important;
+		object-position: center center !important;
+	}
+
+	.cliniva-about__features {
+		display: flex !important;
+		flex-direction: column !important;
+		width: 100% !important;
+	}
+
+	.cliniva-about__feature {
+		width: 100% !important;
+	}
+
+	.cliniva-about__stats {
+		position: relative !important;
+		z-index: 2 !important;
+		margin-top: 24px !important;
+		grid-template-columns: 1fr 1fr !important;
+		gap: 16px !important;
+		min-height: 0 !important;
+	}
+
+	/* ---- Services: no pull-up over About ---- */
+	.cliniva-services {
+		position: relative !important;
+		z-index: 3 !important;
+		margin-top: 0 !important;
+		padding-top: 40px !important;
+		overflow: hidden !important;
+		background: #f1f6fe !important;
+	}
+
+	.cliniva-services-grid {
+		margin-top: 16px !important;
+		width: calc(100% - 24px) !important;
+		max-width: 100% !important;
+		position: relative !important;
+		z-index: 2 !important;
+	}
+
+	.cliniva-services-grid__items,
+	.cliniva-services .cliniva-services-grid {
+		grid-template-columns: 1fr !important;
+		gap: 14px !important;
+	}
+
+	.cliniva-service-card,
+	.cliniva-services-grid__card {
+		width: 100% !important;
+		min-height: 0 !important;
+	}
+
+	/* ---- Insurance ---- */
+	.cliniva-insurance {
+		padding: 12px 12px 28px !important;
+	}
+
+	.cliniva-insurance-card {
+		position: relative !important;
+		z-index: 2 !important;
+	}
+
+	.cliniva-insurance-heading {
+		max-width: 100% !important;
+		width: 100% !important;
+		line-height: 1.5 !important;
+		font-size: 15px !important;
+	}
+
+	.cliniva-insurance-eyebrow {
+		line-height: 1.45 !important;
+		font-size: 13px !important;
+	}
+
+	.cliniva-insurance-logos {
+		display: grid !important;
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+		grid-auto-flow: row !important;
+		gap: 20px 16px !important;
+		place-items: center !important;
+		justify-content: stretch !important;
+		align-content: start !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		padding: 0 !important;
+		box-sizing: border-box !important;
+	}
+
+	.cliniva-insurance-logo {
+		flex: none !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		min-width: 0 !important;
+		margin: 0 !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.cliniva-insurance-logo:last-child:nth-child(odd) {
+		grid-column: 1 / -1 !important;
+		max-width: 160px !important;
+		justify-self: center !important;
+	}
+
+	.cliniva-insurance-logo img {
+		margin: 0 auto !important;
+		max-width: 120px !important;
+		max-height: 38px !important;
+	}
+}
+
+/* =========================================================
+   MOBILE (≤767)
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.cliniva-hero-wrapper {
+		margin-top: 0 !important;
+		padding-bottom: 24px !important;
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+	}
+
+	.cliniva-hero-wrapper .hero-image-wrapper {
+		width: min(260px, 72vw) !important;
+	}
+
+	.cliniva-hero-wrapper .cliniva-hero-inner {
+		flex-direction: column !important;
+		align-items: stretch !important;
+		gap: 18px !important;
+	}
+
+	.cliniva-hero-wrapper .hero-content-col {
+		order: 1 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		flex: none !important;
+	}
+
+	.cliniva-hero-wrapper .hero-image-col {
+		order: 2 !important;
+	}
+
+	.cliniva-hero-scroll,
+	.cliniva-hero-wrapper .hero-decor {
+		display: none !important;
+	}
+
+	.cliniva-about__stats {
+		grid-template-columns: 1fr !important;
+		gap: 14px !important;
+	}
+
+	.cliniva-about__stat,
+	.cliniva-about__stat:nth-child(odd) {
+		border-right: 0 !important;
+		padding: 0 !important;
+		width: 100% !important;
+	}
+
+	.cliniva-services-hero,
+	.cliniva-doctors-hero,
+	.cliniva-about-hero,
+	.cliniva-contact-hero {
+		overflow: hidden !important;
+		min-height: 0 !important;
+		height: auto !important;
+	}
+
+	.cliniva-appointment__container {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	.cliniva-testimonials__slider .swiper-slide {
+		width: min(320px, 88vw) !important;
+		flex-basis: min(320px, 88vw) !important;
+	}
+
+	.elementor-element:has(.cliniva-insurance),
+	.elementor-element:has(.cliniva-insurance-card) {
+		margin-top: 12px !important;
+	}
+
+	.elementor-element:has(.cliniva-about),
+	.elementor-element:has(.cliniva-services),
+	.elementor-element:has(.cliniva-services-grid) {
+		margin-top: 8px !important;
+	}
+}
+
+/* =========================================================
+   DOCTORS PAGE (post 16) + ABOUT PAGE (post 20)
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+	.elementor-16 .e-con.e-parent,
+	.elementor-20 .e-con.e-parent,
+	.elementor-16 .elementor-element[data-element_type="container"],
+	.elementor-20 .elementor-element[data-element_type="container"] {
+		--min-height: 0px !important;
+		min-height: 0 !important;
+	}
+
+	.elementor-20 .elementor-element.elementor-element-61cc86a {
+		--margin-top: 0px !important;
+		margin-top: 0 !important;
+	}
+
+	.elementor-16 .elementor-element.elementor-element-6a1fb8d > .elementor-widget-container {
+		margin: 0 !important;
+	}
+
+	/* Doctors hero */
+	.cliniva-doctors-hero,
+	.elementor-16 .cliniva-doctors-hero {
+		width: 100% !important;
+		max-width: 100% !important;
+		min-height: 0 !important;
+		height: auto !important;
+		overflow: hidden !important;
+	}
+
+	.cliniva-doctors-hero__visual,
+	.elementor-16 .cliniva-doctors-hero__visual {
+		position: relative !important;
+		inset: auto !important;
+		top: auto !important;
+		right: auto !important;
+		left: auto !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.cliniva-doctors-hero__image,
+	.cliniva-doctors-hero__image-wrap,
+	.cliniva-doctors-hero__image-wrap img,
+	.elementor-16 .cliniva-doctors-hero__image {
+		position: relative !important;
+		inset: auto !important;
+		top: auto !important;
+		right: auto !important;
+		left: auto !important;
+		display: block !important;
+		width: min(280px, 78vw) !important;
+		max-width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 1 / 1 !important;
+		margin: 0 auto !important;
+		object-fit: cover !important;
+		object-position: center center !important;
+		border-radius: 50% !important;
+	}
+
+	.cliniva-doctors-hero__content {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	.cliniva-doctors-hero__search-wrap {
+		position: relative !important;
+		inset: auto !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-top: 16px !important;
+		transform: none !important;
+	}
+
+	.cliniva-doctors-hero__search {
+		grid-template-columns: 1fr !important;
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	.cliniva-doctors-grid__cards,
+	.elementor-16 .cliniva-doctors-grid__cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+
+	.cliniva-doctor-card,
+	.elementor-16 .cliniva-doctor-card {
+		min-height: 0 !important;
+		width: 100% !important;
+	}
+
+	/* About hero */
+	.cliniva-about-hero,
+	.elementor-20 .cliniva-about-hero {
+		width: 100% !important;
+		max-width: 100% !important;
+		min-height: 0 !important;
+		height: auto !important;
+		overflow: hidden !important;
+	}
+
+	.cliniva-about-hero__layout {
+		flex-direction: column !important;
+		align-items: stretch !important;
+		gap: 28px !important;
+		min-height: 0 !important;
+	}
+
+	.cliniva-about-hero__content,
+	.cliniva-about-hero__visual,
+	.elementor-20 .cliniva-about-hero__visual {
+		width: 100% !important;
+		max-width: 100% !important;
+		flex: none !important;
+		transform: none !important;
+	}
+
+	.cliniva-about-hero__image,
+	.elementor-20 .cliniva-about-hero__image {
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 16 / 7 !important;
+		border-radius: 80px !important;
+	}
+
+	.cliniva-about-hero__stats,
+	.elementor-20 .cliniva-about-hero__stats {
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		gap: 14px !important;
+		padding: 0 16px !important;
+		box-sizing: border-box !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.cliniva-about-hero__stat,
+	.elementor-20 .cliniva-about-hero__stat {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 96px !important;
+		flex: none !important;
+		box-sizing: border-box !important;
+	}
+
+	.cliniva-about-hero__scroll {
+		bottom: 8px !important;
+	}
+
+	.cliniva-about-story,
+	.elementor-20 .cliniva-about-story {
+		width: 100% !important;
+		max-width: 100% !important;
+		min-height: 0 !important;
+		padding: 28px 20px !important;
+	}
+
+	.cliniva-about-story__inner {
+		flex-direction: column !important;
+		gap: 28px !important;
+	}
+
+	.cliniva-about-story__content,
+	.cliniva-about-story__media,
+	.cliniva-about-story__image,
+	.elementor-20 .cliniva-about-story__image {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	.cliniva-about-values__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+
+	.cliniva-about-values__card,
+	.elementor-20 .cliniva-about-values__card {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 0 !important;
+	}
+
+	.cliniva-why-choose-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+
+	.cliniva-why-choose-card {
+		min-height: 0 !important;
+	}
+
+	.cliniva-smile-cta__inner {
+		flex-direction: column !important;
+		text-align: center !important;
+		gap: 18px !important;
+	}
+
+	.cliniva-testimonials__decoration--left,
+	.cliniva-testimonials__decoration--right-top,
+	.cliniva-testimonials__decoration--right-bottom {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.cliniva-doctors-grid__cards,
+	.elementor-16 .cliniva-doctors-grid__cards {
+		grid-template-columns: 1fr !important;
+	}
+
+	.cliniva-about-values__grid,
+	.cliniva-why-choose-grid {
+		grid-template-columns: 1fr !important;
+	}
+
+	.cliniva-doctors-hero__title {
+		font-size: 30px !important;
+		line-height: 1.15 !important;
+	}
+
+	.cliniva-about-hero__title {
+		font-size: 30px !important;
+		line-height: 1.2 !important;
+	}
+
+	.cliniva-about-hero__badge {
+		white-space: normal !important;
+		height: auto !important;
+		min-height: 0 !important;
+		text-align: center;
+	}
+
+	.cliniva-team__grid,
+	.cliniva-team-grid,
+	.cliniva-team .cliniva-team-items {
+		grid-template-columns: 1fr !important;
+	}
+
+	.elementor-device-mobile .elementor-16 .cliniva-doctors-hero__image,
+	.elementor-device-mobile .elementor-20 .cliniva-about-hero__stats,
+	.elementor-device-mobile .elementor-20 .cliniva-about-hero__stat {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+	}
+}
+
+.elementor-device-mobile .elementor-20 .elementor-element.elementor-element-61cc86a,
+.elementor-device-tablet .elementor-20 .elementor-element.elementor-element-61cc86a {
+	--margin-top: 0px !important;
+	margin-top: 0 !important;
+}
+
+.elementor-device-mobile .elementor-16 .elementor-element.elementor-element-6a1fb8d > .elementor-widget-container,
+.elementor-device-tablet .elementor-16 .elementor-element.elementor-element-6a1fb8d > .elementor-widget-container {
+	margin: 0 !important;
+}

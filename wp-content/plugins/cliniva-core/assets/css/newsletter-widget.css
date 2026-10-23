@@ -1,0 +1,560 @@
+/**
+ * Cliniva Newsletter Widget
+ */
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+.cliniva-newsletter {
+    position: relative;
+
+    width: 1280px;
+    max-width: 100%;
+
+    min-height: 247px;
+
+    margin: 0 auto;
+
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    box-sizing: border-box;
+
+    background: #2563EB;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.cliniva-newsletter__info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    min-width: 0;
+
+    flex: 1 1 auto;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.cliniva-newsletter__icon {
+    width: 78px;
+    height: 78px;
+
+    flex: 0 0 78px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+.cliniva-newsletter__icon-image {
+    display: block !important;
+
+    width: 80px !important;
+    height: 64px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    position: static !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.cliniva-newsletter__content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    min-width: 0;
+}
+
+
+.cliniva-newsletter__title {
+    margin: 0 0 8px;
+
+    padding: 0;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    color: #ffffff;
+}
+
+
+.cliniva-newsletter__description {
+    margin: 0;
+
+    padding: 0;
+
+    max-width: 560px;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.cliniva-newsletter__form {
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.cliniva-newsletter__form-group {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: stretch;
+
+    justify-content: flex-end;
+
+    gap: 0;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.cliniva-newsletter__button {
+    order: 1;
+
+    width: 145px;
+    min-width: 145px;
+
+    height: 66px;
+    min-height: 66px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    padding: 0 24px;
+
+    box-sizing: border-box;
+
+    background: #2563EB;
+
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+
+    /*
+     * الزرار والـ input متصلين
+     */
+    border-right: 0;
+
+    /*
+     * مستطيل بدون تدوير
+     */
+    border-radius: 0 !important;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.cliniva-newsletter__button:hover {
+    background: #1D4ED8;
+
+    color: #ffffff;
+}
+
+
+.cliniva-newsletter__button:focus {
+    outline: none;
+}
+
+
+.cliniva-newsletter__button:focus-visible {
+    outline: 2px solid #ffffff;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.cliniva-newsletter__input {
+    order: 2;
+
+    display: block;
+
+    width: 345px;
+
+    height: 66px;
+
+    margin: 0;
+
+    padding: 0 26px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    /*
+     * متصل بالزرار
+     */
+    border: 1px solid #ffffff;
+
+    border-left: 0;
+
+    /*
+     * مستطيل بدون تدوير
+     */
+    border-radius: 0 !important;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    box-shadow: none;
+
+    transition:
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.cliniva-newsletter__input::placeholder {
+    color: #64748B;
+
+    opacity: 1;
+}
+
+
+.cliniva-newsletter__input:focus {
+    outline: none;
+
+    box-shadow: none;
+
+    border-radius: 0 !important;
+}
+
+
+/* =========================================
+   FORCE RECTANGULAR JOIN
+========================================= */
+
+.cliniva-newsletter__button,
+.cliniva-newsletter__button:hover,
+.cliniva-newsletter__button:focus,
+.cliniva-newsletter__input,
+.cliniva-newsletter__input:hover,
+.cliniva-newsletter__input:focus {
+    border-radius: 0 !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .cliniva-newsletter {
+        width: 100%;
+
+        min-height: 247px;
+
+        gap: 30px;
+
+        padding: 24px;
+    }
+
+
+    /* ICON */
+
+    .cliniva-newsletter__icon {
+        width: 68px;
+        height: 68px;
+
+        flex: 0 0 68px;
+    }
+
+
+    .cliniva-newsletter__icon-image {
+        width: 42px !important;
+        height: 42px !important;
+
+        min-width: 42px !important;
+        min-height: 42px !important;
+    }
+
+
+    /* TYPOGRAPHY */
+
+    .cliniva-newsletter__title {
+        font-size: 22px;
+    }
+
+
+    .cliniva-newsletter__description {
+        font-size: 14px;
+    }
+
+
+    /* FORM */
+
+    .cliniva-newsletter__button {
+        width: 130px;
+
+        min-width: 130px;
+
+        height: 60px;
+
+        min-height: 60px;
+
+        padding: 0 20px;
+    }
+
+
+    .cliniva-newsletter__input {
+        width: 300px;
+
+        height: 60px;
+
+        padding: 0 22px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-newsletter {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 28px 22px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: center;
+
+        gap: 28px;
+
+        border-radius: 24px;
+    }
+
+
+    /* =====================================
+       INFO
+    ===================================== */
+
+    .cliniva-newsletter__info {
+        width: 100%;
+
+        align-items: center;
+
+        gap: 16px;
+    }
+
+
+    /* =====================================
+       ICON
+    ===================================== */
+
+    .cliniva-newsletter__icon {
+        width: 60px;
+        height: 60px;
+
+        flex: 0 0 60px;
+
+        border-radius: 9px;
+    }
+
+
+    .cliniva-newsletter__icon-image {
+        width: 36px !important;
+        height: 36px !important;
+
+        min-width: 36px !important;
+        min-height: 36px !important;
+    }
+
+
+    /* =====================================
+       TYPOGRAPHY
+    ===================================== */
+
+    .cliniva-newsletter__title {
+        font-size: 21px;
+
+        line-height: 1.3;
+    }
+
+
+    .cliniva-newsletter__description {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================
+       FORM
+    ===================================== */
+
+    .cliniva-newsletter__form {
+        width: 100%;
+    }
+
+
+    .cliniva-newsletter__form-group {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+
+    /* =====================================
+       BUTTON
+    ===================================== */
+
+    .cliniva-newsletter__button {
+        order: 1;
+
+        width: 100%;
+
+        min-width: 100%;
+
+        height: 56px;
+
+        min-height: 56px;
+
+        padding: 0 24px;
+
+        border: 1px solid #ffffff;
+
+        border-radius: 0 !important;
+    }
+
+
+    /* =====================================
+       INPUT
+    ===================================== */
+
+    .cliniva-newsletter__input {
+        order: 2;
+
+        width: 100%;
+
+        height: 56px;
+
+        padding: 0 20px;
+
+        border: 1px solid #ffffff;
+
+        border-radius: 0 !important;
+    }
+}

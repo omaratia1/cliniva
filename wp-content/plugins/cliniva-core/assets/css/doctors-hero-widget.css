@@ -1,0 +1,885 @@
+/*
+ * Cliniva Doctors Hero
+ * File: assets/css/doctors-hero-widget.css
+ *
+ * Clean component stylesheet
+ * No image positioning changes
+ */
+
+.cliniva-doctors-hero {
+    --cliniva-blue: #2467E8;
+    --cliniva-navy: #111B33;
+    --cliniva-text: #506789;
+    --cliniva-bg: #E3F5FC;
+    --cliniva-white: #FFFFFF;
+    --cliniva-arrow: #12BDBE;
+
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    min-height: 629px;
+    margin: 0 auto;
+    padding: 0;
+
+    background: var(--cliniva-bg);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+
+.cliniva-doctors-hero *,
+.cliniva-doctors-hero *::before,
+.cliniva-doctors-hero *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN HERO
+   ========================================================= */
+
+.cliniva-doctors-hero__inner {
+    position: relative;
+    width: 100%;
+    min-height: 510px;
+
+    padding: 50px 28px 38px;
+}
+
+
+.cliniva-doctors-hero__main {
+    position: relative;
+    width: 100%;
+    min-height: 455px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.cliniva-doctors-hero__content {
+    position: absolute;
+    z-index: 3;
+
+    top: 82px;
+    left: 0;
+
+    width: 48%;
+    max-width: 500px;
+}
+
+
+/* Badge */
+
+.cliniva-doctors-hero__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+    padding: 0 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    color: var(--cliniva-blue);
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+.cliniva-doctors-hero__badge-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
+}
+
+
+.cliniva-doctors-hero__badge-icon svg {
+    width: 16px;
+    height: 16px;
+
+    display: block;
+}
+
+
+/* Title */
+
+.cliniva-doctors-hero__title {
+    margin: 48px 0 24px;
+    padding: 0;
+
+    color: var(--cliniva-navy);
+
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+}
+
+
+.cliniva-doctors-hero__title span {
+    color: var(--cliniva-blue);
+}
+
+
+/* Description */
+
+.cliniva-doctors-hero__description {
+    max-width: 470px;
+
+    margin: 0;
+
+    color: var(--cliniva-text);
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+
+.cliniva-doctors-hero__image {
+    display: block;
+    position: absolute;
+    z-index: 2;
+
+    top: 65px;
+    right: 65px;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: contain;
+    object-position: center center;
+
+    border-radius: 0 !important;
+
+    box-shadow: none;
+
+    filter: none;
+
+    box-sizing: border-box;
+}
+
+
+/* Elementor / Image Widget Override */
+
+.cliniva-doctors-hero__image-wrap img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: contain;
+    object-position: center center;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    filter: none !important;
+}
+
+
+/* =========================================================
+   SEARCH PANEL
+   FIGMA:
+   1231px × 92px
+   ========================================================= */
+
+.cliniva-doctors-hero__search-wrap {
+    position: absolute;
+    z-index: 10;
+
+    left: 50%;
+    right: auto;
+    bottom: -2px;
+
+    width: 1231px;
+    max-width: calc(100% - 56px);
+
+    padding: 0;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   SEARCH CONTAINER
+   ========================================================= */
+
+.cliniva-doctors-hero__search {
+    display: grid;
+
+    grid-template-columns:
+        512px 200px 200px 170px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 92px;
+    min-height: 92px;
+
+    padding: 23px 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 16px;
+
+    /*
+     * More transparent glass,
+     * closer to Figma.
+     */
+    background: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 10px 30px rgba(31, 73, 125, 0.06);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transition:
+        background-color 0.25s ease,
+        backdrop-filter 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Glass hover */
+
+.cliniva-doctors-hero__search:hover {
+    background: rgba(255, 255, 255, 0.14);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 14px 36px rgba(31, 73, 125, 0.09);
+}
+
+
+/* =========================================================
+   ALL SEARCH ELEMENTS
+   44px HEIGHT
+   ========================================================= */
+
+.cliniva-doctors-hero__search-field,
+.cliniva-doctors-hero__select,
+.cliniva-doctors-hero__search-button {
+    height: 44px;
+    min-height: 44px;
+
+    border-radius: 9px;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+   512 × 44px
+   ========================================================= */
+
+.cliniva-doctors-hero__search-field {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 512px;
+    min-width: 512px;
+    max-width: 512px;
+
+    padding: 0 18px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(225, 231, 240, 0.90);
+}
+
+
+.cliniva-doctors-hero__search-icon {
+    flex: 0 0 auto;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 12px;
+
+    color: #425B7A;
+
+    line-height: 1;
+}
+
+
+.cliniva-doctors-hero__search-icon svg {
+    display: block;
+
+    width: 18px;
+    height: 18px;
+}
+
+
+.cliniva-doctors-hero__search-input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #425B7A;
+
+    font-size: 14px;
+    line-height: 1;
+
+    box-shadow: none;
+}
+
+
+.cliniva-doctors-hero__search-input::placeholder {
+    color: #506789;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   SELECT
+   200 × 44px
+   ========================================================= */
+
+.cliniva-doctors-hero__select {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+
+    padding: 0 18px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(225, 231, 240, 0.90);
+
+    color: #506789;
+
+    font-size: 14px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SELECT ARROW
+   ========================================================= */
+
+.cliniva-doctors-hero__select-arrow {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 14px;
+    height: 14px;
+
+    margin-left: 10px;
+
+    color: #425B7A;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/*
+ * Create the small downward arrow with CSS.
+ */
+
+.cliniva-doctors-hero__select-arrow::before {
+    content: "";
+
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-top: 6px solid #425B7A;
+
+    transition:
+        transform 0.2s ease,
+        border-top-color 0.2s ease;
+}
+
+
+/*
+ * Hide an existing icon inside the arrow container
+ * so we don't get two arrows.
+ */
+
+.cliniva-doctors-hero__select-arrow i,
+.cliniva-doctors-hero__select-arrow svg {
+    display: none;
+}
+
+
+/* =========================================================
+   OPEN SELECT
+   Arrow turns upward
+   ========================================================= */
+
+.cliniva-doctors-hero__select.is-open .cliniva-doctors-hero__select-arrow::before,
+
+.cliniva-doctors-hero__select[aria-expanded="true"] .cliniva-doctors-hero__select-arrow::before,
+
+.cliniva-doctors-hero__select.active .cliniva-doctors-hero__select-arrow::before {
+    transform: rotate(180deg);
+}
+
+
+/* Select hover */
+
+.cliniva-doctors-hero__select:hover {
+    border-color: rgba(36, 103, 232, 0.25);
+}
+
+
+.cliniva-doctors-hero__select:hover .cliniva-doctors-hero__select-arrow::before {
+    border-top-color: var(--cliniva-blue);
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+   170 × 44px
+   ========================================================= */
+
+.cliniva-doctors-hero__search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    min-width: 170px;
+    max-width: 170px;
+
+    margin: 0;
+    padding: 0 20px;
+
+    border: 0;
+    outline: 0;
+
+    background: var(--cliniva-blue);
+
+    color: var(--cliniva-white);
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.cliniva-doctors-hero__search-button:hover {
+    background: #1F5FD8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(36, 103, 232, 0.22);
+}
+
+
+/* =========================================================
+   BOTTOM ARROW
+   ========================================================= */
+
+.cliniva-doctors-hero__arrow {
+    position: absolute;
+    z-index: 20;
+
+    left: 50%;
+    bottom: -115px;
+
+    width: 56px;
+    height: 56px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: -28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: var(--cliniva-arrow);
+
+    text-decoration: none;
+
+    box-shadow:
+        0 6px 20px rgba(31, 73, 125, 0.08);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.cliniva-doctors-hero__arrow:hover {
+    transform: translateY(3px);
+
+    background: var(--cliniva-white);
+
+    color: var(--cliniva-arrow);
+
+    box-shadow:
+        0 10px 24px rgba(31, 73, 125, 0.13);
+}
+
+
+.cliniva-doctors-hero__arrow i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+.cliniva-doctors-hero__arrow svg {
+    display: block;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cliniva-doctors-hero {
+        max-width: calc(100% - 32px);
+    }
+
+
+    .cliniva-doctors-hero__inner {
+        min-height: 500px;
+
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+
+    .cliniva-doctors-hero__visual {
+        top: 20px;
+        right: 8px;
+
+        width: min(58vw, 620px);
+        height: auto;
+
+        aspect-ratio: 620 / 419;
+    }
+
+
+    .cliniva-doctors-hero__image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
+
+    .cliniva-doctors-hero__content {
+        width: 48%;
+    }
+
+
+    .cliniva-doctors-hero__title {
+        font-size: 42px;
+    }
+
+
+    /* Responsive search */
+
+    .cliniva-doctors-hero__search-wrap {
+        width: calc(100% - 48px);
+        max-width: none;
+    }
+
+
+    .cliniva-doctors-hero__search {
+        grid-template-columns:
+            minmax(0, 1fr) 150px 150px 130px;
+    }
+
+
+    .cliniva-doctors-hero__search-field {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
+
+
+    .cliniva-doctors-hero__select {
+        width: 150px;
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+
+    .cliniva-doctors-hero__search-button {
+        width: 130px;
+        min-width: 130px;
+        max-width: 130px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-doctors-hero {
+        max-width: calc(100% - 20px);
+        border-radius: 22px;
+    }
+
+
+    .cliniva-doctors-hero__inner {
+        min-height: auto;
+
+        padding: 28px 18px 88px;
+    }
+
+
+    .cliniva-doctors-hero__main {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .cliniva-doctors-hero__content {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        max-width: none;
+
+        z-index: 3;
+    }
+
+
+    .cliniva-doctors-hero__badge {
+        min-height: 40px;
+        padding: 0 18px;
+    }
+
+
+    .cliniva-doctors-hero__title {
+        margin-top: 28px;
+        margin-bottom: 18px;
+
+        font-size: 34px;
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+    }
+
+
+    .cliniva-doctors-hero__description {
+        max-width: none;
+
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    .cliniva-doctors-hero__visual {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        inset: auto !important;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+
+        margin: 28px auto 0 !important;
+
+        aspect-ratio: auto;
+    }
+
+
+    .cliniva-doctors-hero__image,
+    .cliniva-doctors-hero__image-wrap,
+    .cliniva-doctors-hero__image-wrap img {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        inset: auto !important;
+
+        display: block !important;
+
+        width: min(280px, 78vw) !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+
+        margin: 0 auto !important;
+
+        object-fit: cover !important;
+        object-position: center center !important;
+
+        border-radius: 50% !important;
+    }
+
+
+    .cliniva-doctors-hero__search-wrap {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 16px auto 0 !important;
+
+        transform: none !important;
+        z-index: 4;
+    }
+
+
+    .cliniva-doctors-hero__search {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        padding: 12px;
+
+        border-radius: 16px;
+    }
+
+
+    .cliniva-doctors-hero__search-field,
+    .cliniva-doctors-hero__select,
+    .cliniva-doctors-hero__search-button {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+
+        height: 52px;
+        min-height: 52px;
+    }
+
+
+    .cliniva-doctors-hero__arrow {
+        bottom: -28px;
+
+        width: 54px;
+        height: 54px;
+
+        margin-left: -27px;
+    }
+
+    .cliniva-doctors-hero__arrow {
+        bottom: -28px;
+
+        width: 54px;
+        height: 54px;
+
+        margin-left: -27px;
+    }
+}
+
+/* =========================================================
+   DESKTOP / GLOBAL FLAT TOP
+   Keep the hero top edge straight so it can visually
+   connect with the header without rounded top corners.
+   ========================================================= */
+
+.cliniva-doctors-hero {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top: 0 !important;
+}
+
+.cliniva-doctors-hero__inner,
+.cliniva-doctors-hero__main {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}

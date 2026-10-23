@@ -1,0 +1,1054 @@
+/* =========================================================
+   CLINIVA APPOINTMENT
+   Desktop Base - Figma Layout
+   ========================================================= */
+
+.cliniva-appointment {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    background: #f1f6fe;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.cliniva-appointment *,
+.cliniva-appointment *::before,
+.cliniva-appointment *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.cliniva-appointment__container {
+    position: relative;
+
+    display: flex;
+    align-items: stretch;
+
+    width: 1276px;
+    min-height: 903px;
+
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.cliniva-appointment__left {
+    position: relative;
+
+    width: 644px;
+    min-height: 903px;
+
+    padding: 110px 0 0;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.cliniva-appointment__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 265px;
+    height: 43px;
+
+    margin: 0 0 26px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    color: #2467e8;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+
+    box-shadow: 0 4px 15px rgba(36, 103, 232, 0.03);
+}
+
+
+/* =========================================================
+   LEFT TITLE
+   ========================================================= */
+
+.cliniva-appointment__title {
+    max-width: 500px;
+
+    margin: 0 0 22px;
+
+    color: #15213a;
+
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.cliniva-appointment__title-blue {
+    color: #2467e8;
+}
+
+
+/* =========================================================
+   LEFT DESCRIPTION
+   ========================================================= */
+
+.cliniva-appointment__description {
+    max-width: 540px;
+
+    margin: 0 0 25px;
+
+    color: #64748b;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   VISUAL / IMAGE
+   ========================================================= */
+
+.cliniva-appointment__visual {
+    position: relative;
+
+    width: 600px;
+    height: 367px;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+   ========================================================= */
+
+.cliniva-appointment__image-wrap {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 365px;
+    height: 367px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    z-index: 1;
+}
+
+.cliniva-appointment__image {
+    display: block;
+
+    width: 365px;
+    height: 367px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+
+/* Empty image state */
+
+.cliniva-appointment__image-wrap--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+   ========================================================= */
+
+.cliniva-appointment__features {
+    position: absolute;
+
+    top: 18px;
+    right: 0;
+
+    width: 275px;
+    height: 323px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+   ========================================================= */
+
+.cliniva-appointment__feature {
+    display: flex;
+    align-items: flex-start;
+
+    width: 275px;
+    min-height: 101px;
+
+    padding: 14px 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe7f6;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 16px rgba(36, 103, 232, 0.09);
+}
+
+
+/* =========================================================
+   FEATURE ICON
+   ========================================================= */
+
+.cliniva-appointment__feature-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 14px;
+
+    border-radius: 50%;
+
+    background: #2467e8;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    line-height: 1;
+}
+
+.cliniva-appointment__feature-icon svg {
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    fill: currentColor;
+}
+
+.cliniva-appointment__feature-icon i {
+    display: block;
+
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FEATURE CONTENT
+   ========================================================= */
+
+.cliniva-appointment__feature-content {
+    min-width: 0;
+
+    padding-top: 1px;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+   ========================================================= */
+
+.cliniva-appointment__feature-title {
+    margin: 0 0 6px;
+
+    color: #15213a;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+   ========================================================= */
+
+.cliniva-appointment__feature-description {
+    max-width: 175px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   RIGHT FORM CARD
+   ========================================================= */
+
+.cliniva-appointment__form-card {
+    position: relative;
+
+    flex: 0 0 632px;
+
+    width: 632px;
+    height: 903px;
+
+    margin: 0;
+
+    padding: 42px 34px 26px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(36, 103, 232, 0.07);
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   FORM TOP ICON
+   ========================================================= */
+
+.cliniva-appointment__form-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    margin: 0 auto 13px;
+
+    border-radius: 50%;
+
+    background: #e7f4ff;
+
+    color: #2467e8;
+
+    font-size: 22px;
+}
+
+.cliniva-appointment__form-icon svg {
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    fill: currentColor;
+}
+
+.cliniva-appointment__form-icon i {
+    display: block;
+
+    font-size: 22px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FORM TITLE
+   ========================================================= */
+
+.cliniva-appointment__form-title {
+    margin: 0 0 8px;
+
+    color: #15213a;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FORM DESCRIPTION
+   ========================================================= */
+
+.cliniva-appointment__form-description {
+    max-width: 500px;
+
+    margin: 0 auto 24px;
+
+    color: #64748b;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.cliniva-appointment__form {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   FORM ROW
+   ========================================================= */
+
+.cliniva-appointment__row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.cliniva-appointment__field {
+    width: 100%;
+
+    margin: 0 0 13px;
+}
+
+
+/* =========================================================
+   FIELD LABEL
+   ========================================================= */
+
+.cliniva-appointment__field label {
+    display: block;
+
+    margin: 0 0 7px;
+
+    color: #15213a;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.3;
+}
+
+.cliniva-appointment__field label span {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   INPUT WRAPPERS
+   ========================================================= */
+
+.cliniva-appointment__input-wrap,
+.cliniva-appointment__select-wrap,
+.cliniva-appointment__textarea-wrap {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.cliniva-appointment__input-wrap input,
+.cliniva-appointment__select-wrap select,
+.cliniva-appointment__textarea-wrap textarea {
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid #d8dee8;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #15213a;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   INPUT / SELECT HEIGHT
+   ========================================================= */
+
+.cliniva-appointment__input-wrap input,
+.cliniva-appointment__select-wrap select {
+    height: 45px;
+
+    padding: 0 42px;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.cliniva-appointment__input-wrap input:focus,
+.cliniva-appointment__select-wrap select:focus,
+.cliniva-appointment__textarea-wrap textarea:focus {
+    border-color: #2467e8;
+
+    box-shadow: 0 0 0 3px rgba(36, 103, 232, 0.08);
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.cliniva-appointment__input-wrap input::placeholder,
+.cliniva-appointment__textarea-wrap textarea::placeholder {
+    color: #b8bec8;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   FIELD ICON
+   ========================================================= */
+
+.cliniva-appointment__input-icon {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+
+    transform: translateY(-50%);
+
+    color: #16b7ad;
+
+    font-size: 14px;
+    line-height: 1;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* Font Awesome <i> */
+
+.cliniva-appointment__input-icon i {
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #16b7ad;
+
+    font-size: 14px;
+
+    line-height: 15px;
+}
+
+
+/* Elementor SVG */
+
+.cliniva-appointment__input-icon svg {
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #16b7ad;
+
+    fill: currentColor;
+
+    stroke: currentColor;
+}
+
+
+/* SVG paths */
+
+.cliniva-appointment__input-icon svg path {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.cliniva-appointment__select-wrap select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding-right: 42px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SELECT ARROW
+   ========================================================= */
+
+/* =========================================================
+   SMALL GREEN SELECT ARROW
+   ========================================================= */
+
+.cliniva-appointment__select-arrow {
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 10px;
+    height: 10px;
+
+    transform: translateY(-50%);
+
+    color: #16b7ad;
+
+    font-size: 0;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+.cliniva-appointment__select-arrow::before {
+    content: "";
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #16b7ad;
+    border-bottom: 2px solid #16b7ad;
+
+    transform: rotate(45deg) translateY(-2px);
+}
+
+.cliniva-appointment__select-arrow i,
+.cliniva-appointment__select-arrow svg {
+    display: none;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.cliniva-appointment__textarea-wrap textarea {
+    height: 140px;
+    min-height: 140px;
+
+    resize: vertical;
+
+    padding: 13px 42px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MESSAGE ICON
+   ========================================================= */
+
+.cliniva-appointment__textarea-wrap .cliniva-appointment__input-icon {
+    top: 18px;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   MESSAGE FIELD
+   ========================================================= */
+
+.cliniva-appointment__field--message {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   DATE & TIME — GREEN CHEVRON
+   ========================================================= */
+
+.cliniva-appointment__date-wrap,
+.cliniva-appointment__time-wrap {
+    position: relative;
+}
+
+
+/* Hide browser native date/time icon */
+.cliniva-appointment__date-wrap input[type="date"]::-webkit-calendar-picker-indicator,
+.cliniva-appointment__time-wrap input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================================================
+   GREEN CHEVRON
+   ========================================================= */
+
+.cliniva-appointment__date-arrow,
+.cliniva-appointment__time-arrow {
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 10px;
+    height: 10px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* Arrow */
+.cliniva-appointment__date-arrow::before,
+.cliniva-appointment__time-arrow::before {
+    content: "";
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-right: 2px solid #16b7ad;
+    border-bottom: 2px solid #16b7ad;
+
+    transform: rotate(45deg);
+
+    margin-top: -3px;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* =========================================================
+   ARROW UP WHEN FIELD IS OPEN / FOCUSED
+   ========================================================= */
+
+.cliniva-appointment__date-wrap:focus-within .cliniva-appointment__date-arrow::before,
+
+.cliniva-appointment__time-wrap:focus-within .cliniva-appointment__time-arrow::before {
+    transform: rotate(225deg);
+
+    margin-top: 3px;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.cliniva-appointment__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+    height: 47px;
+
+    margin: 0;
+    padding: 0 20px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: #2467e8;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 14px rgba(36, 103, 232, 0.14);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   SUBMIT HOVER
+   ========================================================= */
+
+.cliniva-appointment__submit:hover {
+    background: #1858d4;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 7px 18px rgba(36, 103, 232, 0.20);
+}
+
+
+/* =========================================================
+   SUBMIT ICONS
+   ========================================================= */
+
+.cliniva-appointment__submit i {
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+.cliniva-appointment__submit svg {
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    fill: currentColor;
+
+    stroke: currentColor;
+}
+
+
+/* =========================================================
+   PRIVACY
+   ========================================================= */
+
+.cliniva-appointment__privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 22px;
+
+    color: #16b7ad;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PRIVACY ICON
+   ========================================================= */
+
+.cliniva-appointment__privacy i {
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+.cliniva-appointment__privacy svg {
+    display: block;
+
+    width: 13px;
+    height: 13px;
+
+    fill: currentColor;
+
+    stroke: currentColor;
+}
+
+
+/* =========================================================
+   ELEMENTOR EDITOR
+   ========================================================= */
+
+.elementor-editor-active .cliniva-appointment__submit {
+    cursor: pointer;
+}
+
+/* =========================================================
+   PHONE ICON — CORRECT DIRECTION
+   ========================================================= */
+
+/* Main phone field selector */
+.cliniva-appointment__field--phone .cliniva-appointment__input-icon i,
+.cliniva-appointment__field--phone .cliniva-appointment__input-icon svg,
+
+/* Fallback: detect the phone input directly */
+.cliniva-appointment__input-wrap:has(input[type="tel"]) .cliniva-appointment__input-icon i,
+.cliniva-appointment__input-wrap:has(input[type="tel"]) .cliniva-appointment__input-icon svg {
+    transform: scaleX(-1) !important;
+    transform-origin: center center;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .cliniva-appointment__container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 720px;
+        min-height: 0;
+        margin: 0 auto;
+        padding: 48px 20px 56px;
+    }
+
+    .cliniva-appointment__left {
+        width: 100%;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .cliniva-appointment__visual {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+    }
+
+    .cliniva-appointment__image-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        aspect-ratio: 365 / 367;
+    }
+
+    .cliniva-appointment__features {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cliniva-appointment__form-card {
+        width: 100%;
+        max-width: 520px;
+        margin: 28px auto 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .cliniva-appointment__container {
+        padding: 36px 16px 48px;
+    }
+
+    .cliniva-appointment__title {
+        font-size: 24px;
+    }
+
+    .cliniva-appointment__badge {
+        width: auto;
+        max-width: 100%;
+        padding: 0 18px;
+    }
+
+    .cliniva-appointment__row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cliniva-appointment__form-card {
+        padding: 28px 18px;
+    }
+}

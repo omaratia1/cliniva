@@ -1,0 +1,428 @@
+/**
+ * Cliniva Contact Form
+ */
+
+.cliniva-contact-form {
+    --cliniva-blue: #2467e8;
+    --cliniva-navy: #111b33;
+    --cliniva-text: #506789;
+    --cliniva-bg: #f1f6fe;
+    --cliniva-white: #ffffff;
+    --cliniva-border: #e2e8f0;
+
+    width: 100%;
+    padding: 80px 24px;
+    background: var(--cliniva-bg);
+    box-sizing: border-box;
+}
+
+.cliniva-contact-form *,
+.cliniva-contact-form *::before,
+.cliniva-contact-form *::after {
+    box-sizing: border-box;
+}
+
+.cliniva-contact-form__container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+    gap: 48px;
+    align-items: start;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cliniva-contact-form__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    margin: 0 0 22px;
+    padding: 0 22px;
+    color: var(--cliniva-blue);
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(36, 103, 232, 0.05);
+}
+
+.cliniva-contact-form__title {
+    margin: 0 0 16px;
+    color: var(--cliniva-navy);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.cliniva-contact-form__description {
+    max-width: 480px;
+    margin: 0 0 28px;
+    color: var(--cliniva-text);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.cliniva-contact-form__features {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0 0 32px;
+}
+
+.cliniva-contact-form__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.cliniva-contact-form__feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    color: var(--cliniva-blue);
+    background: #e8f0fe;
+    border-radius: 50%;
+}
+
+.cliniva-contact-form__feature-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.cliniva-contact-form__feature-icon i {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.cliniva-contact-form__feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.cliniva-contact-form__feature-content strong {
+    color: var(--cliniva-navy);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.cliniva-contact-form__feature-content span {
+    color: var(--cliniva-text);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.cliniva-contact-form__image-wrap {
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.cliniva-contact-form__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cliniva-contact-form__card {
+    width: 100%;
+    padding: 36px 32px;
+    background: var(--cliniva-white);
+    border-radius: 20px;
+    box-shadow: 0 12px 36px rgba(17, 27, 51, 0.08);
+}
+
+.cliniva-contact-form__card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 16px;
+    color: var(--cliniva-blue);
+    background: #e8f0fe;
+    border-radius: 50%;
+}
+
+.cliniva-contact-form__card-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.cliniva-contact-form__card-icon i {
+    font-size: 22px;
+}
+
+.cliniva-contact-form__card-title {
+    margin: 0 0 8px;
+    color: var(--cliniva-navy);
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.cliniva-contact-form__card-desc {
+    margin: 0 0 24px;
+    color: var(--cliniva-text);
+    font-size: 14px;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.cliniva-contact-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cliniva-contact-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.cliniva-contact-form__field label {
+    display: block;
+    margin: 0 0 8px;
+    color: var(--cliniva-navy);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cliniva-contact-form__input-wrap,
+.cliniva-contact-form__select-wrap,
+.cliniva-contact-form__textarea-wrap {
+    position: relative;
+}
+
+.cliniva-contact-form__input-icon {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    color: #16b7ad;
+    font-size: 14px;
+    line-height: 1;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.cliniva-contact-form__textarea-wrap .cliniva-contact-form__input-icon {
+    top: 16px;
+    transform: none;
+}
+
+.cliniva-contact-form__input-icon i {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    color: #16b7ad;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.cliniva-contact-form__input-icon svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    color: #16b7ad;
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+.cliniva-contact-form__input-wrap input,
+.cliniva-contact-form__select-wrap select,
+.cliniva-contact-form__textarea-wrap textarea {
+    width: 100%;
+    height: 48px;
+    padding: 0 42px 0 42px;
+    color: var(--cliniva-navy);
+    background: #ffffff;
+    border: 1px solid var(--cliniva-border);
+    border-radius: 10px;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cliniva-contact-form__textarea-wrap textarea {
+    height: 120px;
+    min-height: 120px;
+    padding: 14px 16px 14px 42px;
+    resize: vertical;
+}
+
+.cliniva-contact-form__input-wrap input::placeholder,
+.cliniva-contact-form__textarea-wrap textarea::placeholder {
+    color: #b8bec8;
+    opacity: 1;
+}
+
+.cliniva-contact-form__input-wrap input:focus,
+.cliniva-contact-form__select-wrap select:focus,
+.cliniva-contact-form__textarea-wrap textarea:focus {
+    border-color: var(--cliniva-blue);
+    box-shadow: 0 0 0 3px rgba(36, 103, 232, 0.08);
+}
+
+.cliniva-contact-form__select-wrap select {
+    appearance: none;
+    cursor: pointer;
+    color: #b8bec8;
+}
+
+.cliniva-contact-form__select-wrap select:valid,
+.cliniva-contact-form__select-wrap select option {
+    color: var(--cliniva-navy);
+}
+
+.cliniva-contact-form__select-wrap select option:disabled {
+    color: #b8bec8;
+}
+
+.cliniva-contact-form__select-arrow,
+.cliniva-contact-form__date-arrow,
+.cliniva-contact-form__time-arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    z-index: 5;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #16b7ad;
+    border-bottom: 2px solid #16b7ad;
+    transform: translateY(-60%) rotate(45deg);
+    pointer-events: none;
+}
+
+.cliniva-contact-form__date-wrap,
+.cliniva-contact-form__time-wrap {
+    position: relative;
+}
+
+.cliniva-contact-form__input-wrap:has(input[type="tel"]) .cliniva-contact-form__input-icon i,
+.cliniva-contact-form__input-wrap:has(input[type="tel"]) .cliniva-contact-form__input-icon svg {
+    transform: scaleX(-1);
+    transform-origin: center center;
+}
+
+.cliniva-contact-form__input-wrap input[type="date"]::-webkit-calendar-picker-indicator,
+.cliniva-contact-form__input-wrap input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.cliniva-contact-form__submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+    margin-top: 6px;
+    color: #fff;
+    background: var(--cliniva-blue);
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cliniva-contact-form__submit:hover {
+    background: #1d56c7;
+    transform: translateY(-1px);
+}
+
+.cliniva-contact-form__submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+.cliniva-contact-form__feedback {
+    margin-top: 4px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.cliniva-contact-form__feedback.is-success {
+    color: #0f766e;
+    background: #ccfbf1;
+}
+
+.cliniva-contact-form__feedback.is-error {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+@media (max-width: 1024px) {
+    .cliniva-contact-form {
+        padding: 64px 20px;
+    }
+
+    .cliniva-contact-form__container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .cliniva-contact-form__card {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .cliniva-contact-form__image-wrap {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cliniva-contact-form {
+        padding: 48px 16px;
+    }
+
+    .cliniva-contact-form__title {
+        font-size: 26px;
+    }
+
+    .cliniva-contact-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .cliniva-contact-form__card {
+        padding: 28px 18px;
+    }
+
+    .cliniva-contact-form__image-wrap {
+        max-width: 100%;
+    }
+}

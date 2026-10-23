@@ -1,0 +1,643 @@
+/* =========================================================
+   CLINIVA HEADER
+   FIGMA CARD — 1350px
+========================================================= */
+
+:root {
+    --cliniva-header-width: 1350px;
+    --cliniva-header-radius: 24px;
+    --cliniva-header-content-width: 1206px;
+--cliniva-header-bg:
+        linear-gradient(
+            135deg,
+            #e3f2fb 0%,
+            #dceff9 50%,
+            #e5f4fb 100%
+        );
+    --cliniva-primary: #2563EB;
+}
+
+
+/* =========================================================
+   MAIN HEADER CARD
+========================================================= */
+
+.cliniva-custom-header {
+
+    position: relative;
+
+    width: min(var(--cliniva-header-width),
+            calc(100% - 32px));
+
+    height: 98px;
+
+    margin: 18px auto 0;
+
+    background: var(--cliniva-header-bg);
+
+    border: 2px solid rgba(255, 255, 255, 0.95);
+
+    border-radius:
+        var(--cliniva-header-radius) var(--cliniva-header-radius) 0 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    z-index: 100;
+
+    box-shadow:
+        0 6px 24px rgba(36, 103, 232, 0.025);
+}
+
+
+/* =========================================================
+   HEADER BOTTOM LINE
+========================================================= */
+
+.cliniva-custom-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.cliniva-custom-header .cliniva-container {
+
+    width: min(var(--cliniva-header-content-width),
+            calc(100% - 32px));
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    column-gap: 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.cliniva-custom-header .logo-col {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    min-width: 0;
+}
+
+
+.cliniva-custom-header .logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.cliniva-custom-header .logo a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+
+.cliniva-custom-header .logo img {
+
+    display: block;
+
+    width: 46px;
+
+    height: 46px;
+
+    object-fit: contain;
+
+    max-width: none;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.cliniva-custom-header .nav-col {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+.cliniva-custom-header .header-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.cliniva-custom-header .header-nav ul.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 34px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.cliniva-custom-header .header-nav ul.menu>li {
+
+    position: relative;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    white-space: nowrap;
+}
+
+
+.cliniva-custom-header .header-nav ul.menu>li>a {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 8px 0;
+
+    color: #101a33;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+/* Hover */
+
+.cliniva-custom-header .header-nav ul.menu>li>a:hover {
+
+    color: var(--cliniva-primary);
+}
+
+
+/* =========================================================
+   ACTIVE MENU
+========================================================= */
+
+.cliniva-custom-header .header-nav ul.menu>li.current-menu-item>a,
+.cliniva-custom-header .header-nav ul.menu>li.current_page_item>a,
+.cliniva-custom-header .header-nav ul.menu>li.current-menu-parent>a {
+
+    color: var(--cliniva-primary);
+
+    font-weight: 500;
+}
+
+
+/* Active underline */
+
+.cliniva-custom-header .header-nav ul.menu>li.current-menu-item>a::after,
+.cliniva-custom-header .header-nav ul.menu>li.current_page_item>a::after,
+.cliniva-custom-header .header-nav ul.menu>li.current-menu-parent>a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 1px;
+
+    height: 2px;
+
+    background: var(--cliniva-primary);
+
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cliniva-custom-header .cta-col {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    min-width: 0;
+}
+
+
+.cliniva-custom-header .cta-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 218px;
+
+    height: 48px;
+
+    padding: 0 28px;
+
+    box-sizing: border-box;
+
+    background: #2467e8;
+
+    color: #ffffff;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    box-shadow: none;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.cliniva-custom-header .cta-btn:hover {
+
+    background: #1858d5;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE / PANEL
+========================================================= */
+
+.cliniva-custom-header .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: #101a33;
+    cursor: pointer;
+    z-index: 120;
+}
+
+.cliniva-custom-header .mobile-toggle__bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.cliniva-custom-header.mobile-menu-active .mobile-toggle__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.cliniva-custom-header.mobile-menu-active .mobile-toggle__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.cliniva-custom-header.mobile-menu-active .mobile-toggle__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.cliniva-custom-header .cliniva-mobile-overlay,
+.cliniva-custom-header .cliniva-mobile-panel {
+    display: none;
+}
+
+html.cliniva-mobile-nav-open,
+html.cliniva-mobile-nav-open body {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   STICKY HEADER
+========================================================= */
+
+.cliniva-custom-header.is-sticky {
+
+    position: sticky;
+
+    top: 0;
+}
+
+
+/* =========================================================
+   TRANSPARENT HEADER
+========================================================= */
+
+.cliniva-custom-header.is-transparent {
+
+    background: var(--cliniva-header-bg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cliniva-custom-header {
+
+        width: calc(100% - 24px);
+
+        height: 92px;
+    }
+
+    .cliniva-custom-header .cliniva-container {
+
+        width: calc(100% - 32px);
+
+        grid-template-columns:
+            auto 1fr auto;
+
+        column-gap: 24px;
+    }
+
+    .cliniva-custom-header .header-nav ul.menu {
+
+        gap: 22px;
+    }
+
+    .cliniva-custom-header .cta-btn {
+
+        min-width: 190px;
+
+        height: 46px;
+
+        padding: 0 22px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE NAV
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .cliniva-custom-header {
+
+        width: calc(100% - 16px);
+
+        height: 76px;
+
+        margin-top: 8px;
+
+        border-radius: 18px 18px 0 0;
+    }
+
+
+    .cliniva-custom-header .cliniva-container {
+
+        width: calc(100% - 24px);
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 16px;
+    }
+
+
+    .cliniva-custom-header .logo img {
+
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    .cliniva-custom-header .nav-col {
+
+        display: none;
+    }
+
+
+    .cliniva-custom-header .cta-col {
+
+        display: none;
+    }
+
+
+    .cliniva-custom-header .mobile-toggle {
+        display: flex;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 110;
+        background: rgba(16, 26, 51, 0.45);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-panel {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 115;
+        width: min(86vw, 340px);
+        height: 100vh;
+        height: 100dvh;
+        padding: 88px 22px 28px;
+        background: #ffffff;
+        box-shadow: -12px 0 40px rgba(17, 27, 51, 0.16);
+        transform: translateX(104%);
+        transition: transform 0.28s ease;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .cliniva-custom-header.mobile-menu-active .cliniva-mobile-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .cliniva-custom-header.mobile-menu-active .cliniva-mobile-panel {
+        transform: translateX(0);
+    }
+
+    .cliniva-custom-header .cliniva-mobile-panel__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        min-height: 100%;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-menu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-menu a {
+        display: block;
+        padding: 14px 12px;
+        color: #111b33;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-menu a:hover,
+    .cliniva-custom-header .cliniva-mobile-menu .current-menu-item > a {
+        color: #2467e8;
+        background: #eef4ff;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-panel__cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 48px;
+        margin-top: auto;
+        padding: 0 20px;
+        color: #ffffff;
+        background: #2467e8;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-custom-header {
+
+        width: calc(100% - 12px);
+
+        border-radius: 16px 16px 0 0;
+    }
+
+    .cliniva-custom-header .cliniva-mobile-panel {
+        width: min(92vw, 320px);
+        padding: 80px 18px 24px;
+    }
+}

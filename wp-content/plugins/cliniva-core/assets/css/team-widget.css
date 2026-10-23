@@ -1,0 +1,596 @@
+/* =========================================================
+   Cliniva - Our Team
+   Final Design
+   ========================================================= */
+
+.cliniva-team {
+    position: relative;
+    width: 100%;
+    padding: 58px 20px 70px;
+    background: #f1f6fe;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cliniva-team *,
+.cliniva-team *::before,
+.cliniva-team *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.cliniva-team-header {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.cliniva-team-eyebrow {
+    width: 210px;
+    min-height: 36px;
+    margin: 0 auto 18px;
+    padding: 9px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+
+    color: #1769e0;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.cliniva-team-heading {
+    margin: 0 0 12px;
+
+    color: #172036;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+.cliniva-team-description {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: #52627a;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   Grid
+   ========================================================= */
+
+.cliniva-team-grid {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   Card
+   ========================================================= */
+
+.cliniva-team-card {
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.10),
+        0 1px 3px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cliniva-team-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 22px rgba(15, 23, 42, 0.13),
+        0 2px 5px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   Doctor Image
+   ========================================================= */
+
+.cliniva-team-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    padding: 8px 8px 0;
+}
+
+.cliniva-team-image,
+.cliniva-team-image-placeholder {
+    display: block;
+
+    width: 100%;
+    height: 255px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+}
+
+.cliniva-team-image-placeholder {
+    background: linear-gradient(135deg,
+            #e8eef7,
+            #dbe5f2);
+}
+
+/* =========================================================
+   Main Tooth Icon
+   ========================================================= */
+
+.cliniva-team-badge {
+    position: absolute;
+
+    left: 50%;
+    bottom: -25px;
+
+    width: 68px;
+    height: 68px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2467e8;
+
+    border: 2px solid #ffffff;
+
+    box-shadow:
+        0 3px 8px rgba(15, 23, 42, 0.12);
+
+    color: #ffffff;
+
+    z-index: 5;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   Tooth Icon
+   Design Size: 32 x 32 px
+   ========================================================= */
+
+.cliniva-team-badge svg {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+    min-height: 32px;
+
+    max-width: 32px;
+    max-height: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    overflow: visible;
+}
+
+.cliniva-team-badge svg path {
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* =========================================================
+   Card Content
+   ========================================================= */
+
+.cliniva-team-content {
+    padding: 43px 14px 16px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   Doctor Name
+   ========================================================= */
+
+.cliniva-team-name {
+    margin: 0 0 7px;
+
+    color: #172036;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   Doctor Role
+   ========================================================= */
+
+.cliniva-team-role {
+    margin-bottom: 12px;
+
+    color: #00bfa6;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   Experience
+   ========================================================= */
+
+.cliniva-team-experience {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-bottom: 13px;
+
+    color: #52627a;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+.cliniva-team-experience-icon {
+    width: 14px;
+    height: 14px;
+
+    flex: 0 0 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2467e8;
+
+    color: #ffffff;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   Social Icons
+   ========================================================= */
+
+.cliniva-team-socials {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 11px;
+
+    margin-bottom: 17px;
+}
+
+.cliniva-team-socials a {
+    width: 28px;
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #edf4ff;
+
+    color: #2467e8;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cliniva-team-socials a:hover {
+    background: #2467e8;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   Appointment Button
+   ========================================================= */
+
+.cliniva-team-button {
+    width: 172px;
+    min-height: 39px;
+
+    margin: 0 auto;
+
+    padding: 9px 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 5px;
+
+    background: #2467e8;
+
+    color: #ffffff !important;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    text-decoration: none !important;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cliniva-team-button:hover {
+    background: #175bd6;
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(36, 103, 232, 0.20);
+}
+
+
+/* =========================================================
+   Calendar Icon
+   ========================================================= */
+
+.cliniva-team-button-icon {
+    width: 16px;
+    height: 16px;
+
+    flex: 0 0 16px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   Button Text
+   ========================================================= */
+
+.cliniva-team-button>span:nth-child(2) {
+    display: inline-flex;
+
+    align-items: center;
+
+    white-space: nowrap;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   Button Arrow
+   ========================================================= */
+
+.cliniva-team-button-arrow {
+    width: 18px;
+    height: 18px;
+
+    flex: 0 0 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 2px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    position: relative;
+
+    top: -1px;
+}
+
+.cliniva-team-button-arrow::before {
+    display: none !important;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .cliniva-team-grid {
+        max-width: 700px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .cliniva-team {
+        padding: 45px 16px 55px;
+    }
+
+    .cliniva-team-header {
+        margin-bottom: 25px;
+    }
+
+    .cliniva-team-heading {
+        font-size: 21px;
+    }
+
+    .cliniva-team-description {
+        font-size: 11px;
+    }
+
+    .cliniva-team-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 360px;
+
+        gap: 18px;
+    }
+
+    .cliniva-team-image,
+    .cliniva-team-image-placeholder {
+        height: 260px;
+    }
+
+    .cliniva-team-badge {
+        width: 48px;
+        height: 48px;
+
+        bottom: -24px;
+    }
+
+    .cliniva-team-badge svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .cliniva-team-socials a {
+        width: 28px;
+        height: 28px;
+
+        flex-basis: 28px;
+
+        font-size: 14px;
+    }
+
+    .cliniva-team-button {
+        width: 172px;
+    }
+
+    .cliniva-team-button-icon {
+        width: 16px;
+        height: 16px;
+
+        flex-basis: 16px;
+
+        font-size: 13px;
+    }
+
+}

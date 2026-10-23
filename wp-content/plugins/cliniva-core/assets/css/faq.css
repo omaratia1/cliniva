@@ -1,0 +1,748 @@
+/* =========================================================
+   CLINIVA FAQ
+   ========================================================= */
+
+.cliniva-faq {
+    --cliniva-faq-accent: #2864e8;
+    --cliniva-faq-bg: #f1f6fe;
+    --cliniva-faq-card-bg: #ffffff;
+
+    position: relative;
+    width: 100%;
+    padding: 64px 0 72px;
+
+    background: var(--cliniva-faq-bg);
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND MASKS
+   ========================================================= */
+
+.cliniva-faq__mask {
+    position: absolute;
+
+    display: block;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 0;
+}
+
+.cliniva-faq__mask--left {
+    left: 0;
+    top: 0;
+
+    max-width: 430px;
+    height: auto;
+}
+
+.cliniva-faq__mask--right {
+    right: 0;
+    top: 0;
+
+    max-width: 390px;
+    height: auto;
+}
+
+.cliniva-faq__mask--dots {
+    right: 45px;
+    top: 45px;
+
+    max-width: 150px;
+    height: auto;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.cliniva-faq__container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(100% - 40px, 1130px);
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.cliniva-faq__header {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 38px;
+}
+
+.cliniva-faq__badge {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 265px;
+    height: 45px;
+
+    margin-bottom: 24px;
+
+    border: 1px solid rgba(40, 100, 232, 0.08);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    color: var(--cliniva-faq-accent);
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+.cliniva-faq__title {
+    margin: 0 0 17px;
+
+    color: #101a35;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.cliniva-faq__description {
+    max-width: 920px;
+
+    color: #53647f;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.cliniva-faq__layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 665px) 435px;
+
+    gap: 48px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FAQ QUESTIONS
+   ========================================================= */
+
+.cliniva-faq__questions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.cliniva-faq__item {
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   QUESTION BUTTON
+   ========================================================= */
+
+.cliniva-faq__question {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+    min-height: 74px;
+
+    padding: 0 20px;
+
+    border: 1px solid #dce8f7;
+    border-radius: 9px;
+
+    background: var(--cliniva-faq-card-bg);
+
+    box-shadow: 0 7px 20px rgba(40, 100, 232, 0.08);
+
+    color: #101a35;
+
+    font-family: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+
+    box-sizing: border-box;
+}
+
+.cliniva-faq__question:hover {
+    border-color: rgba(40, 100, 232, 0.3);
+
+    box-shadow: 0 9px 24px rgba(40, 100, 232, 0.11);
+}
+
+.cliniva-faq__item.is-open .cliniva-faq__question {
+    border-color: rgba(40, 100, 232, 0.22);
+}
+
+
+/* =========================================================
+   QUESTION ICON
+   ========================================================= */
+
+.cliniva-faq__question-icon {
+    flex: 0 0 46px;
+
+    width: 46px !important;
+    height: 46px !important;
+
+    min-width: 46px !important;
+    min-height: 46px !important;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 20px;
+
+    padding: 0 !important;
+
+    border-radius: 50%;
+
+    background: #e6f3fc;
+
+    color: var(--cliniva-faq-accent);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ELEMENTOR ICON — FONT / I
+   ========================================================= */
+
+.cliniva-faq__question-icon i {
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 21px !important;
+
+    line-height: 1 !important;
+
+    color: #2864e8 !important;
+
+    background: transparent !important;
+
+    font-style: normal;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ELEMENTOR ICON — SVG
+   ========================================================= */
+
+.cliniva-faq__question-icon svg {
+    display: block !important;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    min-width: 22px !important;
+    min-height: 22px !important;
+
+    max-width: 22px !important;
+    max-height: 22px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #2864e8 !important;
+
+    fill: #2864e8 !important;
+
+    stroke: #2864e8 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* SVG paths */
+
+.cliniva-faq__question-icon svg path,
+.cliniva-faq__question-icon svg circle,
+.cliniva-faq__question-icon svg rect,
+.cliniva-faq__question-icon svg polygon,
+.cliniva-faq__question-icon svg line,
+.cliniva-faq__question-icon svg polyline {
+    color: #2864e8 !important;
+
+    fill: #2864e8 !important;
+
+    stroke: #2864e8 !important;
+}
+
+
+/* =========================================================
+   IMAGE ICON
+   ========================================================= */
+
+.cliniva-faq__question-icon img {
+    display: block !important;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    min-width: 22px !important;
+    min-height: 22px !important;
+
+    max-width: 22px !important;
+    max-height: 22px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DEFAULT ICON WRAPPER
+   ========================================================= */
+
+.cliniva-faq__default-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.cliniva-faq__default-icon svg {
+    display: block !important;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    max-width: 22px !important;
+    max-height: 22px !important;
+
+    color: #2864e8 !important;
+
+    fill: #2864e8 !important;
+
+    stroke: #2864e8 !important;
+}
+
+
+/* =========================================================
+   QUESTION TEXT
+   ========================================================= */
+
+.cliniva-faq__question-text {
+    flex: 1;
+
+    display: block;
+
+    padding-right: 20px;
+
+    color: #101a35;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.cliniva-faq__arrow {
+    flex: 0 0 24px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    color: var(--cliniva-faq-accent);
+
+    transition: transform 0.25s ease;
+}
+
+.cliniva-faq__arrow svg {
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    color: var(--cliniva-faq-accent);
+
+    fill: none;
+
+    stroke: currentColor;
+}
+
+.cliniva-faq__item.is-open .cliniva-faq__arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   ANSWER
+   ========================================================= */
+
+.cliniva-faq__answer-wrap {
+    overflow: hidden;
+}
+
+.cliniva-faq__answer-wrap[hidden] {
+    display: none;
+}
+
+.cliniva-faq__answer {
+    padding: 18px 68px 21px;
+
+    color: #53647f;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    background: #ffffff;
+
+    border-right: 1px solid #dce8f7;
+    border-bottom: 1px solid #dce8f7;
+    border-left: 1px solid #dce8f7;
+
+    border-radius: 0 0 9px 9px;
+
+    box-sizing: border-box;
+}
+
+.cliniva-faq__answer p {
+    margin: 0 0 10px;
+}
+
+.cliniva-faq__answer p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.cliniva-faq__right {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+   ========================================================= */
+
+.cliniva-faq__image {
+    width: 100%;
+    height: 367px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #e7eef8;
+
+    box-shadow: 0 8px 24px rgba(40, 100, 232, 0.06);
+}
+
+.cliniva-faq__image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   CONTACT BOX
+   ========================================================= */
+
+.cliniva-faq__contact {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+    min-height: 69px;
+
+    margin-top: 12px;
+
+    padding: 10px 12px 10px 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d9e9f8;
+    border-radius: 8px;
+
+    background: #e4f4fc;
+}
+
+
+/* =========================================================
+   CONTACT ICON
+   ========================================================= */
+
+.cliniva-faq__contact-icon {
+    flex: 0 0 30px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 14px;
+
+    color: var(--cliniva-faq-accent);
+}
+
+.cliniva-faq__contact-icon img {
+    display: block;
+
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
+}
+
+.cliniva-faq__contact-icon svg {
+    display: block;
+
+    width: 28px;
+    height: 28px;
+
+    color: var(--cliniva-faq-accent);
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+   ========================================================= */
+
+.cliniva-faq__contact-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.cliniva-faq__contact-content h3 {
+    margin: 0 0 4px;
+
+    color: #101a35;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+.cliniva-faq__contact-content p {
+    margin: 0;
+
+    color: #60718b;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
+.cliniva-faq__contact-button {
+    flex: 0 0 auto;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 93px;
+    height: 47px;
+
+    padding: 0 14px;
+
+    border-radius: 8px;
+
+    background: #16b7ad;
+
+    color: #ffffff !important;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none !important;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cliniva-faq__contact-button:hover {
+    background: #0fa39a;
+
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ELEMENTOR EDITOR
+   ========================================================= */
+
+.elementor-editor-active .cliniva-faq__question {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.cliniva-faq__question:focus-visible,
+.cliniva-faq__contact-button:focus-visible {
+    outline: 2px solid var(--cliniva-faq-accent);
+
+    outline-offset: 3px;
+}
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+    .cliniva-faq {
+        padding: 48px 0 56px;
+    }
+
+    .cliniva-faq__container {
+        width: min(100% - 32px, 1130px);
+    }
+
+    .cliniva-faq__mask {
+        opacity: 0.4;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cliniva-faq__layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .cliniva-faq__right,
+    .cliniva-faq__image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .cliniva-faq {
+        padding: 40px 0 48px;
+    }
+
+    .cliniva-faq__container {
+        width: calc(100% - 24px);
+    }
+
+    .cliniva-faq__header {
+        text-align: left;
+    }
+
+    .cliniva-faq__title {
+        font-size: 28px;
+    }
+
+    .cliniva-faq__contact {
+        width: 100%;
+    }
+}

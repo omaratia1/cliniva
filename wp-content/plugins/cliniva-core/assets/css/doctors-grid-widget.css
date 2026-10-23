@@ -1,0 +1,403 @@
+/*
+ * Cliniva Doctors Grid
+ * File: assets/css/doctors-grid-widget.css
+ */
+
+.cliniva-doctors-grid {
+    --cliniva-primary: #2467e8;
+    --cliniva-primary-dark: #082b82;
+    --cliniva-text: #111b33;
+    --cliniva-muted: #506789;
+    --cliniva-rating: #10b7ad;
+    --cliniva-border: #d9e2ec;
+    --cliniva-card-bg: #ffffff;
+    --cliniva-page-bg: #eef4fb;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--cliniva-page-bg);
+    margin-top: 80px;
+
+}
+
+.cliniva-doctors-grid,
+.cliniva-doctors-grid *,
+.cliniva-doctors-grid *::before,
+.cliniva-doctors-grid *::after {
+    box-sizing: border-box;
+}
+
+.cliniva-doctors-grid__inner {
+    width: 100%;
+    max-width: 1192px;
+    margin: 0 auto;
+}
+
+.cliniva-doctors-grid__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 28px;
+    width: 100%;
+}
+
+.cliniva-doctor-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 386px;
+    padding: 30px 16px 16px;
+    background: var(--cliniva-card-bg);
+    border: 1px solid var(--cliniva-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(17, 27, 51, 0.16);
+    overflow: hidden;
+}
+
+.cliniva-doctor-card__favorite {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--cliniva-muted);
+    font-family: inherit;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.cliniva-doctor-card__favorite:hover {
+    color: var(--cliniva-primary);
+}
+
+.cliniva-doctor-card__image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 174px;
+    margin: 0 auto 16px;
+}
+
+.cliniva-doctor-card__image,
+.cliniva-doctor-card__image-placeholder {
+    display: block;
+    width: 156px;
+    height: 156px;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.cliniva-doctor-card__image {
+    object-fit: cover;
+    object-position: center center;
+}
+
+.cliniva-doctor-card__image-placeholder {
+    background: #d9dee5;
+}
+
+.cliniva-doctor-card__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    text-align: center;
+}
+
+.cliniva-doctor-card__name {
+    margin: 0;
+    color: var(--cliniva-text);
+    font-family: inherit;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.cliniva-doctor-card__specialty {
+    margin-top: 5px;
+    color: var(--cliniva-primary);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.cliniva-doctor-card__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.cliniva-doctor-card__stars {
+    color: var(--cliniva-rating);
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.cliniva-doctor-card__rating-text {
+    color: var(--cliniva-muted);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.cliniva-doctor-card__meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 13px;
+    color: var(--cliniva-muted);
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.cliniva-doctor-card__experience {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.cliniva-doctor-card__meta-icon {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 13px;
+    height: 13px;
+    color: #ffffff;
+    background: var(--cliniva-primary);
+    border-radius: 50%;
+    font-size: 9px;
+    line-height: 1;
+    text-align: center;
+}
+
+.cliniva-doctor-card__patients {
+    color: var(--cliniva-rating);
+    white-space: nowrap;
+}
+
+.cliniva-doctor-card__actions {
+    display: grid;
+    grid-template-columns: 1fr 1.75fr;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+.cliniva-doctor-card__actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.cliniva-doctor-card__profile {
+    color: var(--cliniva-primary);
+    background: #f5faff;
+    border: 1px solid var(--cliniva-primary);
+}
+
+.cliniva-doctor-card__profile:hover {
+    color: #ffffff;
+    background: var(--cliniva-primary);
+}
+
+.cliniva-doctor-card__appointment {
+    color: #ffffff;
+    background: linear-gradient(90deg,
+            #003DC4 0%,
+            #001D5E 100%);
+    border: 1px solid var(--cliniva-primary-dark);
+}
+
+.cliniva-doctor-card__appointment:hover {
+    color: #ffffff;
+    background: var(--cliniva-primary);
+    border-color: var(--cliniva-primary);
+}
+
+.cliniva-doctors-grid__load-more-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 28px;
+}
+
+.cliniva-doctors-grid__load-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 256px;
+    height: 45px;
+    padding: 0 18px;
+    color: var(--cliniva-primary);
+    background: #ffffff;
+    border: 1px solid var(--cliniva-primary);
+    border-radius: 6px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px !important;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    margin: 20px 0 80px 0;
+}
+
+.cliniva-doctors-grid__load-more:hover {
+    color: #ffffff;
+    background: var(--cliniva-primary);
+}
+
+.cliniva-doctors-grid__load-more-arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid currentColor;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+@media (max-width: 1024px) {
+    .cliniva-doctors-grid__inner {
+        padding: 0 20px;
+    }
+
+    .cliniva-doctors-grid__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cliniva-doctors-grid__inner {
+        padding: 0 16px;
+    }
+
+    .cliniva-doctors-grid__cards {
+        grid-template-columns: 1fr !important;
+        gap: 18px;
+    }
+
+    .cliniva-doctor-card {
+        min-height: 0 !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cliniva-doctor-card__image-wrap {
+        height: 166px;
+    }
+
+    .cliniva-doctor-card__image,
+    .cliniva-doctor-card__image-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* =========================================
+   DOCTOR CARD - FAVORITE
+   ========================================= */
+
+    .cliniva-doctor-card__favorite {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+        margin: 0;
+
+        background: transparent;
+        border: 0;
+
+        color: #52647D;
+
+        cursor: pointer;
+
+        transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .cliniva-doctor-card__favorite:hover {
+        transform: scale(1.08);
+    }
+
+    .cliniva-doctor-card__favorite-icon {
+        display: block;
+
+        font-size: 24px;
+        line-height: 1;
+
+        color: currentColor;
+
+        transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    /* Active / Favorited */
+
+    .cliniva-doctor-card__favorite.is-active {
+        color: #E53935;
+    }
+
+    .cliniva-doctor-card__favorite.is-active .cliniva-doctor-card__favorite-icon {
+        color: #E53935;
+
+        animation: cliniva-heart-pop 0.22s ease;
+    }
+
+
+    /* Heart animation */
+
+    @keyframes cliniva-heart-pop {
+
+        0% {
+            transform: scale(0.8);
+        }
+
+        70% {
+            transform: scale(1.15);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+}

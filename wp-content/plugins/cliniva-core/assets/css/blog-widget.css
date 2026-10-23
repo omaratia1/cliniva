@@ -1,0 +1,808 @@
+/* =========================================================
+   CLINIVA BLOG WIDGET
+   File: assets/css/blog-widget.css
+   ========================================================= */
+
+.cliniva-blog {
+    --cliniva-blue: #2467e8;
+    --cliniva-navy: #111b33;
+    --cliniva-text: #506789;
+    --cliniva-bg: #e3f5fc;
+    --cliniva-white: #ffffff;
+    --cliniva-teal: #12bdbe;
+
+    width: 100%;
+    color: var(--cliniva-navy);
+    box-sizing: border-box;
+}
+
+.cliniva-blog *,
+.cliniva-blog *::before,
+.cliniva-blog *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.cliniva-blog__hero {
+    position: relative;
+    width: 1350px;
+    height: 599px;
+    margin: -20px 0 80px -104px;
+    padding: 40px 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    /* * The scroll button sits partially outside * the hero, so it must not be clipped. */
+    overflow: visible;
+    background: radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.52), transparent 26%), linear-gradient(135deg, #dff5fc 0%, #bfeeff 100%);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 28px 28px;
+}
+
+.cliniva-blog__hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 0 1 512px;
+
+    width: 100%;
+
+    max-width: 512px;
+
+    transform: translateY(14px);
+}
+
+.cliniva-blog__badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 40px;
+
+    padding: 9px 22px;
+
+    color: var(--cliniva-blue);
+
+    background: rgba(255, 255, 255, 0.44);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.cliniva-blog__badge-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 16px;
+
+    width: 16px;
+    height: 16px;
+
+    color: var(--cliniva-blue);
+}
+
+.cliniva-blog__badge-icon img {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    object-fit: contain;
+}
+
+.cliniva-blog__hero-title {
+    margin: 42px 0 22px;
+
+    color: var(--cliniva-navy);
+
+    font-size: 44px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    letter-spacing: -1.2px;
+}
+
+.cliniva-blog__hero-description {
+    max-width: 430px;
+
+    margin: 0 0 62px;
+
+    color: var(--cliniva-text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+/* SEARCH */
+
+.cliniva-blog__search {
+    position: relative;
+
+    width: 512px;
+    max-width: 100%;
+
+    height: 44px;
+
+    margin: 0;
+}
+
+.cliniva-blog__search-input {
+    display: block;
+
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 16px 0 42px;
+
+    border: 1px solid rgba(36, 103, 232, 0.12);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    color: var(--cliniva-navy);
+
+    font-size: 13px;
+
+    box-shadow:
+        0 8px 25px rgba(36, 103, 232, 0.06);
+}
+
+.cliniva-blog__search-input:focus {
+    border-color: rgba(36, 103, 232, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(36, 103, 232, 0.09);
+}
+
+.cliniva-blog__search-icon {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    z-index: 2;
+
+    width: 16px;
+    height: 16px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    color: var(--cliniva-text);
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+.cliniva-blog__search-icon img {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    object-fit: contain;
+}
+
+/* HERO IMAGE */
+
+.cliniva-blog__hero-image {
+    position: relative;
+
+    z-index: 1;
+
+    flex: 0 1 52%;
+
+    width: 100%;
+
+    max-width: 590px;
+}
+
+.cliniva-blog__hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    left: -35px;
+    top: 12px;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: rgba(195, 229, 249, 0.7);
+
+    box-shadow:
+        35px 30px 0 rgba(202, 232, 249, 0.65),
+        16px 55px 0 rgba(213, 239, 251, 0.75);
+
+    z-index: -1;
+}
+
+.cliniva-blog__hero-image img {
+    display: block;
+
+    width: 620px;
+
+    height: 413px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 145px;
+
+    box-shadow: none;
+}
+
+/* SCROLL BUTTON */
+
+.cliniva-blog__scroll {
+    position: absolute;
+
+    left: 50%;
+    bottom: -27px;
+
+    z-index: 5;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--cliniva-teal);
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 8px 24px rgba(36, 103, 232, 0.08);
+}
+
+.cliniva-blog__scroll span {
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
+
+.cliniva-blog__categories {
+    width: 100%;
+
+    max-width: 1190px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.cliniva-blog__category {
+    min-width: 88px;
+
+    min-height: 38px;
+
+    padding: 8px 17px;
+
+    border: 1px solid #2b4267;
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: var(--cliniva-navy);
+
+    font: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cliniva-blog__category:hover,
+.cliniva-blog__category.is-active {
+    color: #ffffff;
+
+    background: var(--cliniva-blue);
+
+    border-color: var(--cliniva-blue);
+}
+
+/* =========================================================
+   POSTS
+   ========================================================= */
+
+.cliniva-blog__results {
+    width: 100%;
+
+    max-width: 1190px;
+
+    min-height: 100px;
+
+    margin: 0 auto;
+
+    transition: opacity 0.2s ease;
+}
+
+.cliniva-blog__results.is-loading {
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+
+.cliniva-blog__list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+/* CARD */
+
+.cliniva-blog-card {
+    display: grid;
+
+    grid-template-columns: 38% 1fr;
+
+    align-items: center;
+
+    min-height: 195px;
+
+    padding: 12px 18px 12px 14px;
+
+    background: #ffffff;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 5px 16px rgba(17, 27, 51, 0.10);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cliniva-blog-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(17, 27, 51, 0.13);
+}
+
+/* IMAGE */
+
+.cliniva-blog-card__media {
+    display: block;
+
+    width: 100%;
+
+    height: 168px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    background: #e9eef5;
+}
+
+.cliniva-blog-card__media img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.cliniva-blog-card:hover .cliniva-blog-card__media img {
+    transform: scale(1.03);
+}
+
+.cliniva-blog-card__placeholder {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(135deg,
+            #dce7f2,
+            #eef4f8);
+}
+
+/* CONTENT */
+
+.cliniva-blog-card__content {
+    min-width: 0;
+
+    padding: 10px 18px 10px 28px;
+}
+
+.cliniva-blog-card__category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--cliniva-teal);
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.cliniva-blog-card__title {
+    margin: 0 0 9px;
+
+    color: var(--cliniva-navy);
+
+    font-size: 21px;
+
+    line-height: 1.25;
+
+    font-weight: 600;
+}
+
+.cliniva-blog-card__title a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+.cliniva-blog-card__excerpt {
+    max-width: 570px;
+
+    margin: 0 0 13px;
+
+    color: var(--cliniva-text);
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+.cliniva-blog-card__meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    color: var(--cliniva-blue);
+
+    font-size: 10px;
+}
+
+.cliniva-blog-card__meta-item {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.cliniva-blog-card__meta-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.cliniva-blog-card__meta-icon {
+    color: var(--cliniva-blue);
+}
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.cliniva-blog__pagination {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 30px auto 55px;
+}
+
+.cliniva-blog__page {
+    min-width: 30px;
+
+    height: 30px;
+
+    padding: 0 8px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #31496f;
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: var(--cliniva-navy);
+
+    font: inherit;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cliniva-blog__page:hover,
+.cliniva-blog__page.is-active {
+    color: #ffffff;
+
+    background: var(--cliniva-blue);
+
+    border-color: var(--cliniva-blue);
+}
+
+.cliniva-blog__page.is-disabled {
+    opacity: 0.45;
+
+    cursor: default;
+}
+
+.cliniva-blog__dots {
+    color: var(--cliniva-text);
+
+    font-size: 12px;
+}
+
+/* EMPTY */
+
+.cliniva-blog__empty {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    color: var(--cliniva-text);
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 12px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .cliniva-blog__hero {
+        min-height: 350px;
+
+        padding: 38px 28px 50px;
+
+        gap: 35px;
+    }
+
+    .cliniva-blog__hero-title {
+        font-size: 38px;
+    }
+
+    .cliniva-blog__hero-image img {
+        height: 260px;
+    }
+
+    .cliniva-blog__results,
+    .cliniva-blog__categories {
+        max-width: calc(100% - 40px);
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-blog__hero {
+        min-height: auto;
+
+        margin-bottom: 42px;
+
+        padding: 38px 20px 62px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 34px;
+
+        border-radius: 0 0 24px 24px;
+    }
+
+    .cliniva-blog__hero-content {
+        max-width: 100%;
+
+        transform: none;
+    }
+
+    .cliniva-blog__hero-title {
+        margin-top: 22px;
+
+        font-size: 34px;
+    }
+
+    .cliniva-blog__hero-description {
+        font-size: 13px;
+    }
+
+    .cliniva-blog__hero-image {
+        max-width: 100%;
+    }
+
+    .cliniva-blog__hero-image img {
+        height: auto;
+
+        aspect-ratio: 703 / 307;
+
+        border-radius: 90px;
+    }
+
+    .cliniva-blog__hero-image::before {
+        left: 5px;
+
+        top: -10px;
+
+        width: 45px;
+        height: 45px;
+
+        box-shadow:
+            28px 24px 0 rgba(202, 232, 249, 0.65),
+            14px 43px 0 rgba(213, 239, 251, 0.75);
+    }
+
+    .cliniva-blog__categories {
+        max-width: calc(100% - 28px);
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 5px;
+
+        margin-bottom: 18px;
+
+        scrollbar-width: none;
+    }
+
+    .cliniva-blog__categories::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cliniva-blog__category {
+        flex: 0 0 auto;
+    }
+
+    .cliniva-blog__results {
+        max-width: calc(100% - 28px);
+    }
+
+    .cliniva-blog-card {
+        grid-template-columns: 1fr;
+
+        padding: 12px;
+    }
+
+    .cliniva-blog-card__media {
+        height: 210px;
+    }
+
+    .cliniva-blog-card__content {
+        padding: 17px 5px 7px;
+    }
+
+    .cliniva-blog-card__title {
+        font-size: 19px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-blog__hero-title {
+        font-size: 30px;
+    }
+
+    .cliniva-blog-card__media {
+        height: 185px;
+    }
+
+    .cliniva-blog__pagination {
+        gap: 4px;
+    }
+}
+
+/* Hide duplicated Blog & News text beside the badge */
+.cliniva-blog__badge+.cliniva-blog__hero-title {
+    position: relative;
+    display: block;
+}

@@ -1,0 +1,232 @@
+/**
+ * Cliniva Contact Location
+ */
+
+.cliniva-contact-location {
+    --cliniva-blue: #2467e8;
+    --cliniva-navy: #111b33;
+    --cliniva-text: #506789;
+    --cliniva-white: #ffffff;
+
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    box-sizing: border-box;
+}
+
+.cliniva-contact-location *,
+.cliniva-contact-location *::before,
+.cliniva-contact-location *::after {
+    box-sizing: border-box;
+}
+
+.cliniva-contact-location__header {
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.cliniva-contact-location__title {
+    margin: 0 0 12px;
+    color: var(--cliniva-navy);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cliniva-contact-location__subtitle {
+    margin: 0;
+    color: var(--cliniva-text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cliniva-contact-location__panel {
+    overflow: hidden;
+    background: var(--cliniva-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(17, 27, 51, 0.08);
+}
+
+.cliniva-contact-location__info {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    padding: 28px 20px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.cliniva-contact-location__info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 8px 20px;
+}
+
+.cliniva-contact-location__info-item:not(:last-child) {
+    border-right: 1px solid #eef2f7;
+}
+
+.cliniva-contact-location__info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    color: var(--cliniva-blue);
+    background: #e8f0fe;
+    border-radius: 50%;
+}
+
+.cliniva-contact-location__info-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.cliniva-contact-location__info-icon i {
+    font-size: 16px;
+}
+
+.cliniva-contact-location__info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.cliniva-contact-location__info-content strong {
+    color: var(--cliniva-navy);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cliniva-contact-location__info-content span {
+    color: var(--cliniva-text);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.cliniva-contact-location__map-wrap {
+    position: relative;
+    width: 100%;
+    background: #e8eef5;
+}
+
+.cliniva-contact-location__map {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: 0;
+}
+
+.cliniva-contact-location__marker {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: calc(100% - 32px);
+    padding: 10px 14px;
+    color: var(--cliniva-navy);
+    background: var(--cliniva-white);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(17, 27, 51, 0.16);
+    transform: translate(-50%, -120%);
+    pointer-events: none;
+}
+
+.cliniva-contact-location__marker-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    background: var(--cliniva-blue);
+    border-radius: 50%;
+}
+
+.cliniva-contact-location__marker-icon i {
+    font-size: 14px;
+}
+
+.cliniva-contact-location__marker-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.cliniva-contact-location__marker-text strong {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cliniva-contact-location__marker-text span {
+    color: var(--cliniva-text);
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+    .cliniva-contact-location {
+        padding: 64px 20px;
+    }
+
+    .cliniva-contact-location__info {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px 18px;
+    }
+
+    .cliniva-contact-location__info-item {
+        padding: 0;
+    }
+
+    .cliniva-contact-location__info-item:not(:last-child) {
+        padding-bottom: 16px;
+        border-right: 0;
+        border-bottom: 1px solid #eef2f7;
+    }
+
+    .cliniva-contact-location__map {
+        height: 360px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cliniva-contact-location {
+        padding: 48px 16px;
+    }
+
+    .cliniva-contact-location__title {
+        font-size: 26px;
+    }
+
+    .cliniva-contact-location__subtitle {
+        font-size: 14px;
+    }
+
+    .cliniva-contact-location__map {
+        height: 280px;
+    }
+
+    .cliniva-contact-location__marker {
+        top: 38%;
+        padding: 8px 10px;
+    }
+
+    .cliniva-contact-location__marker-text strong {
+        font-size: 12px;
+    }
+
+    .cliniva-contact-location__marker-text span {
+        font-size: 11px;
+    }
+}

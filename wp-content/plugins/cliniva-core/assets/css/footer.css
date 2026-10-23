@@ -1,0 +1,489 @@
+/* =========================================================
+   CLINIVA FOOTER
+   ========================================================= */
+
+.cliniva-footer {
+    --cliniva-footer-accent: #2864e8;
+    --cliniva-footer-text: #53647f;
+    --cliniva-footer-heading: #101a35;
+    --cliniva-footer-bg: #dff1fc;
+
+    position: relative;
+    width: 100%;
+    padding: 100px 0 30px;
+    background: var(--cliniva-footer-bg);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND MASKS
+   ========================================================= */
+
+.cliniva-footer__mask {
+    position: absolute;
+    display: block;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 0;
+
+    max-width: none;
+    height: auto;
+}
+
+.cliniva-footer__mask--left {
+    left: 0;
+    top: 0;
+}
+
+.cliniva-footer__mask--right {
+    right: 0;
+    top: 0;
+}
+
+.cliniva-footer__mask--dots {
+    right: 45px;
+    top: 45px;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.cliniva-footer__container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(100% - 80px, 1040px);
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.cliniva-footer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 72px;
+}
+
+.cliniva-footer__brand {
+    display: flex;
+    align-items: center;
+
+    flex: 0 0 48%;
+}
+
+.cliniva-footer__logo {
+    display: inline-flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.cliniva-footer__logo img {
+    display: block;
+
+    width: auto;
+    max-width: 150px;
+    max-height: 55px;
+
+    object-fit: contain;
+}
+
+.cliniva-footer__description {
+    flex: 0 0 48%;
+
+    max-width: 470px;
+
+    color: var(--cliniva-footer-text);
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.cliniva-footer__divider,
+.cliniva-footer__bottom-divider {
+    width: 100%;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.cliniva-footer__divider {
+    margin: 30px 0 34px;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.cliniva-footer__main {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1.05fr 1.25fr 1.95fr;
+
+    column-gap: 38px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   COLUMNS
+   ========================================================= */
+
+.cliniva-footer__column {
+    min-width: 0;
+}
+
+.cliniva-footer__column-title {
+    margin: 0 0 26px;
+
+    color: var(--cliniva-footer-heading);
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.cliniva-footer__links {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.cliniva-footer__links li {
+    margin: 0 0 13px;
+    padding: 0;
+}
+
+.cliniva-footer__link {
+    display: inline-block;
+
+    color: var(--cliniva-footer-text);
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cliniva-footer__link:hover {
+    color: var(--cliniva-footer-accent);
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   OPENING HOURS
+   ========================================================= */
+
+.cliniva-footer__hours {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.cliniva-footer__hours li {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 14px;
+    padding: 0;
+
+    color: var(--cliniva-footer-text);
+
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.cliniva-footer__hours li span:first-child {
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.cliniva-footer__newsletter {
+    min-width: 0;
+}
+
+.cliniva-footer__newsletter-text {
+    margin: -7px 0 20px;
+
+    color: var(--cliniva-footer-text);
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.cliniva-footer__newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.cliniva-footer__newsletter-form input {
+    display: block;
+
+    width: 100%;
+    height: 56px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    border: 0;
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    color: #101a35;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    box-shadow:
+        0 6px 18px rgba(40, 100, 232, 0.08);
+}
+
+.cliniva-footer__newsletter-form input::placeholder {
+    color: #9aa8bb;
+}
+
+.cliniva-footer__newsletter-form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 108px;
+    height: 46px;
+
+    margin-top: 13px;
+    padding: 0 20px;
+
+    border: 0;
+    border-radius: 24px;
+
+    background: var(--cliniva-footer-accent);
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cliniva-footer__newsletter-form button:hover {
+    background: #1e56d1;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.cliniva-footer__bottom-divider {
+    margin: 35px 0 27px;
+}
+
+.cliniva-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 45px;
+}
+
+.cliniva-footer__copyright {
+    color: var(--cliniva-footer-text);
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.cliniva-footer__social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cliniva-footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    color: var(--cliniva-footer-accent);
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cliniva-footer__social-link:hover {
+    color: #101a35;
+
+    transform: translateY(-2px);
+}
+
+.cliniva-footer__social-link svg {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    fill: currentColor;
+}
+
+.cliniva-footer__social-link i {
+    display: block;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ELEMENTOR EDITOR
+   ========================================================= */
+
+.elementor-editor-active .cliniva-footer__newsletter-form button {
+    cursor: pointer;
+}
+
+.elementor-editor-active .cliniva-footer__link,
+.elementor-editor-active .cliniva-footer__social-link {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.cliniva-footer__link:focus-visible,
+.cliniva-footer__social-link:focus-visible,
+.cliniva-footer__newsletter-form input:focus-visible,
+.cliniva-footer__newsletter-form button:focus-visible {
+    outline: 2px solid var(--cliniva-footer-accent);
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .cliniva-footer {
+        padding: 72px 0 28px;
+    }
+
+    .cliniva-footer__container {
+        width: min(100% - 40px, 1040px);
+    }
+
+    .cliniva-footer__top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .cliniva-footer__brand,
+    .cliniva-footer__description {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+
+    .cliniva-footer__main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 32px;
+        column-gap: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cliniva-footer {
+        padding: 56px 0 24px;
+    }
+
+    .cliniva-footer__container {
+        width: calc(100% - 32px);
+    }
+
+    .cliniva-footer__mask {
+        opacity: 0.35;
+    }
+
+    .cliniva-footer__main {
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+    }
+
+    .cliniva-footer__column-title {
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+}

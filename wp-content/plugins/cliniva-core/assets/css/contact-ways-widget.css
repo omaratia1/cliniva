@@ -1,0 +1,223 @@
+/**
+ * Cliniva Contact Ways
+ *
+ * File:
+ * assets/css/contact-ways-widget.css
+ */
+
+.cliniva-contact-ways {
+    --cliniva-blue: #2467e8;
+    --cliniva-navy: #111b33;
+    --cliniva-text: #506789;
+    --cliniva-white: #ffffff;
+
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    background: var(--cliniva-white);
+    box-sizing: border-box;
+}
+
+.cliniva-contact-ways *,
+.cliniva-contact-ways *::before,
+.cliniva-contact-ways *::after {
+    box-sizing: border-box;
+}
+
+.cliniva-contact-ways__header {
+    margin: 0 0 48px;
+    text-align: center;
+}
+
+.cliniva-contact-ways__title {
+    margin: 0 0 12px;
+    padding: 0;
+    color: var(--cliniva-navy);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cliniva-contact-ways__subtitle {
+    margin: 0;
+    padding: 0;
+    color: var(--cliniva-text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.cliniva-contact-ways__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.cliniva-contact-ways__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 260px;
+    margin: 0;
+    padding: 32px 24px;
+    background: var(--cliniva-white);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(17, 27, 51, 0.08);
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cliniva-contact-ways__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(17, 27, 51, 0.12);
+}
+
+.cliniva-contact-ways__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    min-height: 36px;
+    margin: 0 0 20px;
+    color: var(--cliniva-blue);
+    line-height: 1;
+}
+
+.cliniva-contact-ways__icon i {
+    display: block;
+    font-size: 36px;
+    line-height: 1;
+    color: currentColor;
+}
+
+.cliniva-contact-ways__icon svg {
+    display: block;
+    width: 36px;
+    height: 36px;
+    fill: currentColor;
+}
+
+.cliniva-contact-ways__card-title {
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 0;
+    color: var(--cliniva-navy);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.cliniva-contact-ways__description {
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 0;
+    color: var(--cliniva-text);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.cliniva-contact-ways__detail {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 0;
+    color: var(--cliniva-blue);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    word-break: break-word;
+    transition: opacity 0.2s ease;
+}
+
+a.cliniva-contact-ways__detail:hover {
+    opacity: 0.8;
+}
+
+.cliniva-contact-ways__meta {
+    margin: 0;
+    padding: 0;
+    color: var(--cliniva-text);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.cliniva-contact-ways__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 12px 22px;
+    color: #ffffff;
+    background: var(--cliniva-blue);
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cliniva-contact-ways__button:hover {
+    color: #ffffff;
+    background: #1d56c7;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .cliniva-contact-ways__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-contact-ways {
+        padding: 56px 16px;
+    }
+
+    .cliniva-contact-ways__header {
+        margin-bottom: 32px;
+    }
+
+    .cliniva-contact-ways__title {
+        font-size: 26px;
+    }
+
+    .cliniva-contact-ways__subtitle {
+        font-size: 14px;
+    }
+
+    .cliniva-contact-ways__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cliniva-contact-ways__card {
+        min-height: 0;
+        padding: 28px 22px;
+    }
+}

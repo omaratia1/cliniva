@@ -1,0 +1,336 @@
+/* =========================================================
+   CLINIVA - SMILE CTA
+========================================================= */
+
+.cliniva-smile-cta {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CTA
+========================================================= */
+
+.cliniva-smile-cta__inner {
+	width: 100%;
+	min-height: 170px;
+
+	display: flex;
+	align-items: center;
+
+	padding: 28px 60px;
+
+	background: #2467E8;
+
+	border-radius: 24px;
+
+	box-sizing: border-box;
+
+	overflow: hidden;
+}
+
+
+/* =========================================================
+   ICON
+   DEFAULT = 80 x 80
+========================================================= */
+
+.cliniva-smile-cta__icon {
+	width: 80px;
+	height: 80px;
+
+	min-width: 80px;
+	min-height: 80px;
+
+	flex: 0 0 80px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 0;
+
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+.cliniva-smile-cta__icon img {
+	display: block;
+
+	width: 80px;
+	height: 80px;
+
+	max-width: none;
+	max-height: none;
+
+	margin: 0;
+	padding: 0;
+
+	object-fit: contain;
+
+	box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.cliniva-smile-cta__content {
+	flex: 1 1 auto;
+
+	min-width: 0;
+
+	margin-left: 26px;
+
+	box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.cliniva-smile-cta__title {
+	margin: 0 0 12px;
+
+	padding: 0;
+
+	color: #ffffff;
+
+	font-size: 26px;
+	font-weight: 600;
+
+	line-height: 1.2;
+
+	box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.cliniva-smile-cta__description {
+	margin: 0;
+
+	padding: 0;
+
+	max-width: 650px;
+
+	color: #ffffff;
+
+	font-size: 16px;
+	font-weight: 400;
+
+	line-height: 1.45;
+
+	box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BUTTON WRAPPER
+========================================================= */
+
+.cliniva-smile-cta__button-wrap {
+	flex: 0 0 auto;
+
+	margin-left: auto;
+
+	padding-left: 30px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.cliniva-smile-cta__button {
+	display: inline-flex;
+
+	align-items: center;
+	justify-content: center;
+
+	width: 180px;
+	height: 48px;
+
+	padding: 0 25px;
+
+	background: #ffffff;
+
+	color: #2467E8;
+
+	border: none;
+
+	border-radius: 8px;
+
+	font-size: 15px;
+	font-weight: 600;
+
+	line-height: 1;
+
+	text-align: center;
+
+	text-decoration: none;
+
+	white-space: nowrap;
+
+	box-sizing: border-box;
+
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.cliniva-smile-cta__button:hover {
+	background: #f5f8ff;
+
+	color: #2467E8;
+
+	text-decoration: none;
+
+	transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+	.cliniva-smile-cta__inner {
+		padding: 26px 35px;
+	}
+
+	.cliniva-smile-cta__content {
+		margin-left: 22px;
+	}
+
+	.cliniva-smile-cta__button-wrap {
+		padding-left: 25px;
+	}
+
+	.cliniva-smile-cta__button {
+		width: 165px;
+	}
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+	.cliniva-smile-cta__inner {
+		flex-direction: column;
+
+		align-items: flex-start;
+
+		padding: 30px 24px;
+
+		min-height: auto;
+	}
+
+
+	/* ICON */
+
+	.cliniva-smile-cta__icon {
+		width: 80px;
+		height: 80px;
+
+		min-width: 80px;
+		min-height: 80px;
+
+		flex: 0 0 80px;
+
+		margin: 0;
+	}
+
+	.cliniva-smile-cta__icon img {
+		width: 80px;
+		height: 80px;
+	}
+
+
+	/* CONTENT */
+
+	.cliniva-smile-cta__content {
+		width: 100%;
+
+		margin-left: 0;
+
+		margin-top: 4px;
+	}
+
+
+	/* TITLE */
+
+	.cliniva-smile-cta__title {
+		font-size: 22px;
+
+		margin-bottom: 10px;
+	}
+
+
+	/* DESCRIPTION */
+
+	.cliniva-smile-cta__description {
+		max-width: 100%;
+
+		font-size: 15px;
+	}
+
+
+	/* BUTTON */
+
+	.cliniva-smile-cta__button-wrap {
+		width: 100%;
+
+		margin-left: 0;
+
+		margin-top: 5px;
+
+		padding-left: 0;
+	}
+
+	.cliniva-smile-cta__button {
+		width: 100%;
+	}
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+	.cliniva-smile-cta__inner {
+		padding: 25px 20px;
+	}
+
+	.cliniva-smile-cta__title {
+		font-size: 20px;
+	}
+
+	.cliniva-smile-cta__description {
+		font-size: 14px;
+	}
+
+}

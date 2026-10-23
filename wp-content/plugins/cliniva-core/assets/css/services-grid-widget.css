@@ -1,0 +1,617 @@
+/* =========================================================
+   CLINIVA SERVICES GRID
+========================================================= */
+
+.cliniva-services-grid {
+    --cliniva-grid-width: 1234px;
+    --cliniva-card-height: 115px;
+
+    width: 100%;
+    max-width: var(--cliniva-grid-width);
+
+    margin: -80px auto 0;
+    padding: 0;
+
+    position: relative;
+    z-index: 5;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.cliniva-services-grid__inner {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.cliniva-services-grid__items {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 32px;
+    row-gap: 34px;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.cliniva-services-grid__card {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+    min-height: var(--cliniva-card-height);
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    background: #ffffff;
+
+    border: 0;
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    text-decoration: none !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.cliniva-services-grid__card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(36, 103, 232, 0.08);
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   ICON BOX
+   Figma: 100 × 85
+========================================================= */
+
+.cliniva-services-grid__icon {
+    width: 100px;
+    height: 85px;
+
+    min-width: 100px;
+    min-height: 85px;
+
+    flex: 0 0 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5ecf5;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ICON
+   Figma: 40 × 40
+========================================================= */
+
+.cliniva-services-grid__icon i {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    line-height: 1;
+
+    color: #2467e8;
+
+    margin: 0;
+
+    flex: 0 0 40px;
+}
+
+
+/* =========================================================
+   SVG ICON
+========================================================= */
+
+.cliniva-services-grid__icon svg {
+    width: 40px;
+    height: 40px;
+
+    display: block;
+
+    color: #2467e8;
+    fill: #2467e8;
+
+    flex: 0 0 40px;
+}
+
+
+/* =========================================================
+   SVG PATH
+========================================================= */
+
+.cliniva-services-grid__icon svg path {
+    fill: currentColor;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.cliniva-services-grid__content {
+    min-width: 0;
+
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.cliniva-services-grid__title {
+    margin: 0 0 8px;
+    padding: 0;
+
+    color: #101b35;
+
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    letter-spacing: -0.2px;
+
+    white-space: normal;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.cliniva-services-grid__description {
+    margin: 0;
+    padding: 0;
+
+    max-width: 420px;
+
+    color: #61708a;
+
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+
+    white-space: normal;
+}
+
+
+/* =========================================================
+   ARROW CIRCLE
+   الدائرة ثابتة - الأيقونة يتم وضعها من Elementor
+========================================================= */
+
+.cliniva-services-grid__arrow {
+    width: 34px;
+    height: 28px;
+
+    min-width: 34px;
+    min-height: 28px;
+
+    flex: 0 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    padding: 0;
+
+    background: #e5ecf5;
+
+    border: 0;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    color: #2467e8;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   ELEMENTOR ICON INSIDE ARROW
+========================================================= */
+
+.cliniva-services-grid__arrow .elementor-icon {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    color: #2467e8;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ELEMENTOR ICON SVG
+========================================================= */
+
+.cliniva-services-grid__arrow .elementor-icon svg {
+    width: 15px;
+    height: 15px;
+
+    display: block;
+
+    fill: currentColor;
+
+    color: #2467e8;
+}
+
+
+/* =========================================================
+   ELEMENTOR ICON FONT
+========================================================= */
+
+.cliniva-services-grid__arrow .elementor-icon i {
+    font-size: 15px;
+
+    line-height: 1;
+
+    color: #2467e8;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   ممنوع أي سهم يتم توليده من CSS
+========================================================= */
+
+.cliniva-services-grid__arrow::before,
+.cliniva-services-grid__arrow::after {
+    content: none !important;
+
+    display: none !important;
+}
+
+
+/* =========================================================
+   ARROW HOVER
+========================================================= */
+
+.cliniva-services-grid__card:hover .cliniva-services-grid__arrow {
+    background: #e5ecf5;
+
+    transform: none;
+}
+
+.cliniva-services-grid__card:hover .cliniva-services-grid__arrow .elementor-icon,
+.cliniva-services-grid__card:hover .cliniva-services-grid__arrow i,
+.cliniva-services-grid__card:hover .cliniva-services-grid__arrow svg {
+    color: #2467e8;
+}
+
+
+/* =========================================================
+   ELEMENTOR EDITOR
+========================================================= */
+
+.elementor-editor-active .cliniva-services-grid {
+    margin-top: 0;
+}
+
+.elementor-editor-active .cliniva-services-grid__items {
+    width: 100%;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1300px) {
+
+    .cliniva-services-grid {
+        width: calc(100% - 48px);
+        max-width: 1234px;
+    }
+
+    .cliniva-services-grid__items {
+        column-gap: 28px;
+        row-gap: 30px;
+    }
+
+    .cliniva-services-grid__card {
+        gap: 18px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .cliniva-services-grid {
+        width: calc(100% - 40px);
+
+        margin-top: 16px;
+    }
+
+    .cliniva-services-grid__items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 20px;
+        row-gap: 24px;
+    }
+
+    .cliniva-services-grid__card {
+        min-height: 105px;
+
+        padding: 15px;
+
+        gap: 14px;
+    }
+
+    .cliniva-services-grid__icon {
+        width: 85px;
+        height: 75px;
+
+        min-width: 85px;
+        min-height: 75px;
+
+        flex-basis: 85px;
+    }
+
+    .cliniva-services-grid__icon i {
+        width: 36px;
+        height: 36px;
+
+        font-size: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .cliniva-services-grid__icon svg {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .cliniva-services-grid__title {
+        font-size: 19px;
+    }
+
+    .cliniva-services-grid__description {
+        font-size: 14px;
+    }
+
+    .cliniva-services-grid__arrow {
+        width: 34px;
+        height: 28px;
+
+        min-width: 34px;
+        min-height: 28px;
+
+        flex-basis: 34px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-services-grid {
+        width: calc(100% - 24px);
+
+        margin-top: 16px !important;
+        position: relative;
+        z-index: 2;
+    }
+
+    .cliniva-services-grid__items {
+        grid-template-columns: 1fr;
+
+        row-gap: 18px;
+    }
+
+    .cliniva-services-grid__card {
+        min-height: 100px;
+
+        padding: 14px;
+
+        gap: 14px;
+
+        border-radius: 12px;
+    }
+
+    .cliniva-services-grid__icon {
+        width: 78px;
+        height: 68px;
+
+        min-width: 78px;
+        min-height: 68px;
+
+        flex-basis: 78px;
+    }
+
+    .cliniva-services-grid__icon i {
+        width: 34px;
+        height: 34px;
+
+        font-size: 34px;
+
+        flex-basis: 34px;
+    }
+
+    .cliniva-services-grid__icon svg {
+        width: 34px;
+        height: 34px;
+
+        flex-basis: 34px;
+    }
+
+    .cliniva-services-grid__title {
+        font-size: 18px;
+
+        margin-bottom: 5px;
+    }
+
+    .cliniva-services-grid__description {
+        font-size: 13px;
+
+        line-height: 1.45;
+
+        max-width: none;
+    }
+
+    .cliniva-services-grid__arrow {
+        width: 34px;
+        height: 28px;
+
+        min-width: 34px;
+        min-height: 28px;
+
+        flex-basis: 34px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-services-grid {
+        width: calc(100% - 20px);
+
+        margin-top: 12px !important;
+    }
+
+    .cliniva-services-grid__card {
+        padding: 12px;
+
+        gap: 12px;
+    }
+
+    .cliniva-services-grid__icon {
+        width: 70px;
+        height: 62px;
+
+        min-width: 70px;
+        min-height: 62px;
+
+        flex-basis: 70px;
+    }
+
+    .cliniva-services-grid__icon i {
+        width: 32px;
+        height: 32px;
+
+        font-size: 32px;
+
+        flex-basis: 32px;
+    }
+
+    .cliniva-services-grid__icon svg {
+        width: 32px;
+        height: 32px;
+
+        flex-basis: 32px;
+    }
+
+    .cliniva-services-grid__title {
+        font-size: 16px;
+    }
+
+    .cliniva-services-grid__description {
+        font-size: 12px;
+    }
+
+    .cliniva-services-grid__arrow {
+        width: 32px;
+        height: 28px;
+
+        min-width: 32px;
+        min-height: 28px;
+
+        flex-basis: 32px;
+    }
+}

@@ -1,0 +1,724 @@
+/* =========================================================
+   CLINIVA — WHY CHOOSE US
+   FINAL CSS
+   ========================================================= */
+
+.cliniva-why-choose {
+    width: 100%;
+    max-width: 1394px;
+    margin: 0 auto;
+    padding: 70px 32px 80px;
+    box-sizing: border-box;
+    background: #eef5ff;
+    color: #16213a;
+    overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.cliniva-why-choose__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.cliniva-why-choose__eyebrow {
+    width: 225px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 22px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    color: #2467e8;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.cliniva-why-choose__title {
+    margin: 0 0 14px;
+    padding: 0;
+    color: #16213a !important;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+/* "Our Priority" — blue exactly like the Figma design */
+.cliniva-why-choose__title span {
+    color: #2467e8 !important;
+}
+
+.cliniva-why-choose__description {
+    width: 100%;
+    max-width: 850px;
+    margin: 0;
+    padding: 0;
+    color: #53647f;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.cliniva-why-choose__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 434px;
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* =========================================================
+   CARDS GRID
+   ========================================================= */
+
+.cliniva-why-choose__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 18px;
+    min-width: 0;
+}
+
+/* =========================================================
+   CARD
+   Default = dark text
+   Hover = green text + green border
+   ========================================================= */
+
+.cliniva-why-choose__card {
+    min-width: 0;
+    min-height: 265px;
+    padding: 20px 14px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(36, 103, 232, 0.10);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(36, 103, 232, 0.08);
+
+    color: #16213a;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+}
+
+/* Card hover */
+.cliniva-why-choose__card:hover {
+    transform: translateY(-4px);
+
+    border-color: #10b7ad !important;
+
+    box-shadow: 0 14px 30px rgba(16, 183, 173, 0.14);
+
+    color: #10b7ad !important;
+}
+
+/* =========================================================
+   REMOVE OLD STATIC ACTIVE GREEN
+   The card becomes green only on hover.
+   ========================================================= */
+
+.cliniva-why-choose__card.is-active {
+    border-color: rgba(36, 103, 232, 0.10);
+    color: #16213a;
+}
+
+.cliniva-why-choose__card.is-active h3 {
+    color: #16213a;
+}
+
+.cliniva-why-choose__card.is-active p {
+    color: #53647f;
+}
+
+/* =========================================================
+   CARD ICON
+   ========================================================= */
+
+.cliniva-why-choose__card-icon {
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 18px;
+
+    box-sizing: border-box;
+
+    background: #e3efff;
+    border-radius: 50%;
+
+    transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cliniva-why-choose__card-icon img {
+    display: block;
+
+    width: 42px;
+    height: 42px;
+
+    max-width: 42px;
+    max-height: 42px;
+
+    object-fit: contain;
+
+    border: 0;
+
+    transition:
+        filter 0.25s ease,
+        opacity 0.25s ease;
+}
+
+/* Icon area on hover */
+.cliniva-why-choose__card:hover .cliniva-why-choose__card-icon {
+    background: rgba(16, 183, 173, 0.10);
+}
+
+/*
+ * Make the icon visually green on hover.
+ * Works especially well with monochrome blue SVG/PNG icons.
+ */
+.cliniva-why-choose__card:hover .cliniva-why-choose__card-icon img {
+    filter:
+        brightness(0) saturate(100%) invert(62%) sepia(42%) saturate(1040%) hue-rotate(126deg) brightness(91%) contrast(89%);
+}
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.cliniva-why-choose__card h3 {
+    margin: 0 0 12px;
+    padding: 0;
+
+    color: #16213a !important;
+
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 700;
+
+    transition: color 0.25s ease;
+}
+
+/* Green title on hover */
+.cliniva-why-choose__card:hover h3 {
+    color: #10b7ad !important;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.cliniva-why-choose__card p {
+    margin: 0;
+    padding: 0;
+
+    color: #53647f !important;
+
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    transition: color 0.25s ease;
+}
+
+/* Green paragraph on hover */
+.cliniva-why-choose__card:hover p {
+    color: #10b7ad !important;
+}
+
+/* =========================================================
+   DOCTOR IMAGE
+   ========================================================= */
+
+.cliniva-why-choose__image {
+    width: 434px;
+    max-width: 100%;
+    height: 740px;
+
+    position: relative;
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    background: transparent !important;
+
+    border: 0;
+
+    border-radius: 120px 0 120px 0;
+
+    z-index: 1;
+}
+
+.cliniva-why-choose__image>img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    object-fit: cover;
+    object-position: center center;
+
+    border: 0;
+    border-radius: inherit;
+
+    background: transparent;
+}
+
+/* =========================================================
+   GREEN BADGE / MASK
+   ========================================================= */
+
+.cliniva-why-choose__badge {
+    position: absolute !important;
+
+    left: 30px !important;
+    bottom: 40px !important;
+
+    width: 175px !important;
+    height: 175px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: block !important;
+    box-sizing: border-box !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+
+    color: #ffffff !important;
+    line-height: 1 !important;
+    text-align: center !important;
+
+    z-index: 20 !important;
+    pointer-events: none !important;
+    transform: rotate(-12deg) !important;
+    transform-origin: center center !important;
+}
+
+/* Actual green mask image */
+.cliniva-why-choose__badge-mask {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    object-fit: fill !important;
+    object-position: center center !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    box-shadow: none !important;
+
+    z-index: 1 !important;
+}
+
+/* Badge content layer */
+.cliniva-why-choose__badge-content {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    padding: 28px 20px 20px !important;
+
+    margin: 0 !important;
+
+    text-align: center !important;
+
+    z-index: 2 !important;
+
+    pointer-events: none !important;
+}
+
+/* Badge logo */
+.cliniva-why-choose__badge-content .cliniva-why-choose__badge-logo {
+    display: block !important;
+
+    width: 34px !important;
+    height: 34px !important;
+
+    min-width: 34px !important;
+    min-height: 34px !important;
+
+    max-width: 34px !important;
+    max-height: 34px !important;
+
+    margin: 0 0 7px !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    z-index: 3 !important;
+}
+
+/* Badge text */
+.cliniva-why-choose__badge-text {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 125px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #ffffff !important;
+
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+
+    font-weight: 500 !important;
+
+    text-align: center !important;
+
+    z-index: 3 !important;
+}
+
+/* Signature */
+.cliniva-why-choose__badge-content .cliniva-why-choose__badge-signature {
+    display: block !important;
+
+    width: 75px !important;
+    height: auto !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: 75px !important;
+    max-height: none !important;
+
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    z-index: 3 !important;
+}
+
+/* Legacy badge text compatibility */
+.cliniva-why-choose__badge>span {
+    display: none !important;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cliniva-why-choose {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .cliniva-why-choose__content {
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 20px;
+    }
+
+    .cliniva-why-choose__cards {
+        gap: 14px;
+    }
+
+    .cliniva-why-choose__card {
+        min-height: 240px;
+        padding: 18px 13px;
+    }
+
+    .cliniva-why-choose__card h3 {
+        font-size: 18px;
+    }
+
+    .cliniva-why-choose__card p {
+        font-size: 14px;
+    }
+
+    .cliniva-why-choose__image {
+        width: 360px;
+        height: 620px;
+        background: transparent !important;
+        border-radius: 100px 0 100px 0;
+    }
+
+    .cliniva-why-choose__badge {
+        left: 8px !important;
+        bottom: 8px !important;
+        width: 145px !important;
+        height: 145px !important;
+    }
+
+    .cliniva-why-choose__badge-content {
+        padding: 23px 16px 16px !important;
+    }
+
+    .cliniva-why-choose__badge-content .cliniva-why-choose__badge-logo {
+        width: 29px !important;
+        height: 29px !important;
+        min-width: 29px !important;
+        min-height: 29px !important;
+        max-width: 29px !important;
+        max-height: 29px !important;
+    }
+
+    .cliniva-why-choose__badge-text {
+        font-size: 11px !important;
+        max-width: 105px !important;
+    }
+
+    .cliniva-why-choose__badge-content .cliniva-why-choose__badge-signature {
+        width: 62px !important;
+        max-width: 62px !important;
+        margin-top: 6px !important;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .cliniva-why-choose {
+        width: 100%;
+        max-width: 100%;
+        padding: 50px 18px 60px;
+    }
+
+    .cliniva-why-choose__header {
+        margin-bottom: 35px;
+    }
+
+    .cliniva-why-choose__eyebrow {
+        width: 210px;
+        height: 38px;
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+
+    .cliniva-why-choose__title {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .cliniva-why-choose__description {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .cliniva-why-choose__content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .cliniva-why-choose__cards {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+        gap: 14px;
+    }
+
+    .cliniva-why-choose__card {
+        min-height: 230px;
+        padding: 18px 14px;
+        border-radius: 16px;
+    }
+
+    .cliniva-why-choose__card-icon {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 15px;
+    }
+
+    .cliniva-why-choose__card-icon img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .cliniva-why-choose__card h3 {
+        font-size: 18px;
+        margin-bottom: 9px;
+    }
+
+    .cliniva-why-choose__card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .cliniva-why-choose__image {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+        background: transparent !important;
+        border-radius: 100px 0 100px 0;
+    }
+
+    .cliniva-why-choose__badge {
+        left: 10px !important;
+        bottom: 10px !important;
+        width: 140px !important;
+        height: 140px !important;
+    }
+
+    .cliniva-why-choose__badge-content {
+        padding: 22px 15px 15px !important;
+    }
+
+    .cliniva-why-choose__badge-content .cliniva-why-choose__badge-logo {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+    }
+
+    .cliniva-why-choose__badge-text {
+        font-size: 11px !important;
+        max-width: 100px !important;
+    }
+
+    .cliniva-why-choose__badge-content .cliniva-why-choose__badge-signature {
+        width: 60px !important;
+        max-width: 60px !important;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .cliniva-why-choose {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cliniva-why-choose__title {
+        font-size: 24px;
+    }
+
+    .cliniva-why-choose__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cliniva-why-choose__card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .cliniva-why-choose__image {
+        height: 420px;
+        background: transparent !important;
+        border-radius: 90px 0 90px 0;
+    }
+
+    .cliniva-why-choose__badge {
+        left: 8px !important;
+        bottom: 8px !important;
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .cliniva-why-choose__badge-content {
+        padding: 19px 12px 12px !important;
+    }
+
+    .cliniva-why-choose__badge-content .cliniva-why-choose__badge-logo {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+        min-height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .cliniva-why-choose__badge-text {
+        font-size: 10px !important;
+        max-width: 88px !important;
+    }
+
+    .cliniva-why-choose__badge-content .cliniva-why-choose__badge-signature {
+        width: 52px !important;
+        max-width: 52px !important;
+        margin-top: 5px !important;
+    }
+}
